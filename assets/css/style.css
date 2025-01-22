@@ -407,6 +407,7 @@ header{
 }
 .First-section-content{
   padding-top: 64px;
+  width: 50% !important ;
 }
 .First-section-content h1 {
   font-family: "PeydaBold";
@@ -469,5 +470,29 @@ header{
   }
 }
 
-
+/* تنظیمات عمومی برای دسکتاپ */
+@media (min-width: 769px) {
+  /* .First-section{
+    width: 50%;
+  } */
+  .First-section-content h1{
+    font-size: 28px;
+  }
+  .First-section-content p {
+    text-align: justify;
+    font-family: 'PeydaMedium';
+    font-size: 16px;
+    line-height: 24px;
+    /* width: 80%; */
+}
+}
+/* تنظیمات عمومی برای موبایل */
+@media (max-width: 768px) {
+  .First-section-content h1{
+    font-size: 24px;
+  }
+  .First-section-content p{
+    width: 100% !important;
+  } 
+}
 /* First section end */
