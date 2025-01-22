@@ -1,0 +1,473 @@
+/*
+Theme Name: Lavan.agancy
+Theme URI: Lavan.agancy
+Author: Saaed.amini@gmail.com
+Author URI: Saeed Amini
+Description: قالب اختصاصی لاوان آژانس
+Version: 0.0
+Tags: responsive, fast,Best for Company, Introducing Website
+Requires at least: 5.0
+Requires PHP: 7.0
+License: GNU General Public License v2 or later
+License URI: Saaed.amini@gmail.com
+Text Domain: Lavan.agancy
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+* {
+  direction: rtl;
+  unicode-bidi: embed;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* .container {
+    width: 1272px;
+    margin: 0 auto;
+} */
+
+@font-face {
+  font-family: "PeydaLight";
+  src: url(/assets/fonts/peydaWeb-light.woff) format("woff");
+}
+@font-face {
+  font-family: "PeydaMedium";
+  src: url(/assets/fonts/PeydaWeb-Medium.woff) format("woff");
+}
+@font-face {
+  font-family: "PeydaBold";
+  src: url(/assets/fonts/PeydaWeb-Bold.woff) format("woff");
+}
+
+@font-face {
+  font-family: "DanaRegular";
+  src: url(/assets/fonts/dana-fanum-regular.woff) format("woff");
+}
+@font-face {
+  font-family: "DanaMedium";
+  src: url(/assets/fonts/dana-fanum-medium.woff) format("woff");
+}
+@font-face {
+  font-family: "DanaBold";
+  src: url(/assets/fonts/dana-fanum-bold.woff) format("woff");
+}
+img {
+  object-fit: contain;
+  width: 100%;
+  height: auto;
+} 
+textPath{
+  direction: ltr !important;
+}
+
+:root {
+  --GrayScale900: #b6b6b6;
+  --whiteColor: #ffffff;
+  --blackColor: #000000;
+  --Primary-Purple: #b9a4fe;
+  --text-purple: #5a42a6;
+  --secondary-purple: #bcadee;
+  --light-purple: #ebe5fe;
+  --light-blue: #e5ecfe;
+  --text-blue: #425ea6;
+  --primary-blue: #adbfed;
+  --primary-pink: #edadb8;
+  --text-pink: #a64253;
+  --light-pink: #fee5e9;
+  --primary-pink: #edadb8;
+  --text-orange: #995036;
+  --light-orange: #feebe5;
+  --primary-orange: #edbead;
+  --text-green: #316159;
+  --light-green: #e2e8e8;
+  --primary-green: #a9d9d1;
+  --dark-background: #110c1d;
+  --pastel-purple: #d9cffc;
+  --pastel-blue: #cfdbfc;
+  --pastel-pink: #fccfd6;
+  --pastel-orange: #fcdbcf;
+  --gray: #808080;
+  --light-purple2: #f5f1ff;
+  --gray2: #575757;
+  --text: #464257;
+}
+
+input {
+  border: none;
+  outline: none;
+}
+
+button {
+  outline: none;
+  border: none;
+}
+
+i.bx {
+  vertical-align: middle;
+}
+
+a {
+  text-decoration: none !important;
+  font-family: "DanaRegular";
+}
+
+p {
+  font-family: "PeydaLight";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+}
+ul {
+  padding: 0;
+  margin: 0 !important;
+}
+
+/* menu style start */
+.logo img {
+  width: 150px;
+  height: auto;
+}
+.main-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--blackColor);
+  padding: 20px 20px;
+  border-radius: 100px;
+  vertical-align: middle;
+  z-index: 1000;
+}
+header{
+  background: linear-gradient(
+    107deg,
+    rgba(223, 213, 255, 1) 5%,
+    rgba(255, 255, 255, 1) 23%
+  );
+}
+
+/* عمومی */
+.navmenu {
+  position: relative;
+}
+.offcanvas-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 70%;
+  height: 100%;
+  background: #fff;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+  transition: right 0.4s ease-in-out;
+  z-index: 999;
+  padding: 1rem;
+}
+.burger-menu {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.menu-item {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.menu-link {
+  display: block;
+  text-decoration: none;
+  color: #333;
+  padding: 0.5rem 0;
+}
+.drop-menu,
+.drop-second-menu,
+.drop-third-menu {
+  display: none;
+  list-style: none;
+  padding-left: 1rem;
+}
+.dropdown > .menu-link:after,
+.drop-submenu > .drop-item:after {
+  content: "▼";
+  float: right;
+  margin-left: 0.5rem;
+  font-size: 0.8rem;
+  transition: transform 0.2s;
+}
+.dropdown.open > .menu-link:after,
+.drop-submenu.open > .drop-item:after {
+  transform: rotate(180deg);
+}
+.dropdown.open > .drop-menu,
+.drop-submenu.open > .drop-second-menu,
+.drop-submenu.open > .drop-third-menu {
+  display: block;
+}
+
+/* ریسپانسیو */
+@media (max-width: 768px) {
+  .burger-menu {
+    display: block;
+  }
+  .offcanvas-menu {
+    display: block;
+  }
+  .main-menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: transparent;
+    padding: 20px 0;
+    border-radius: 100px;
+    vertical-align: middle;
+  }
+  header {
+    background: linear-gradient(107deg, rgba(223, 213, 255, 1) 11%, rgba(255, 255, 255, 1) 40%);
+  }
+}
+/* تنظیمات عمومی برای دسکتاپ */
+@media (min-width: 769px) {
+  .burger-menu {
+    display: none; /* مخفی کردن دکمه برگر در دسکتاپ */
+  }
+
+  .offcanvas-menu {
+    position: static;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end; /* راست‌چین کردن منو */
+    width: auto;
+    height: auto;
+    background: none;
+    box-shadow: none;
+    padding: 0;
+  }
+
+  .menu-item {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+  }
+
+  .menu-link {
+    padding: 0.5rem 1rem;
+    color: var(--whiteColor);
+    text-decoration: none;
+    white-space: nowrap;
+    transition-duration: 0.5s;
+  }
+
+  .menu-link:hover {
+    background-color: var(--whiteColor);
+    transition-duration: 0.5s;
+    border-radius: 5px;
+    color: var(--dark-background);
+  }
+
+  .drop-menu,
+  .drop-second-menu,
+  .drop-third-menu {
+    position: absolute;
+    top: 100%;
+    right: 0; /* نمایش زیرمنوها از سمت راست */
+    display: none;
+    background: var(--whiteColor);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: 0.5rem 0;
+    list-style: none;
+    width: 200px;
+    border-radius: 6px;
+  }
+
+  .drop-second-menu,
+  .drop-third-menu {
+    right: 100%; /* نمایش زیرمنوهای چندسطحی به سمت چپ */
+    top: 0;
+  }
+
+  .dropdown:hover > .drop-menu,
+  .drop-submenu:hover > .drop-second-menu,
+  .drop-submenu:hover > .drop-third-menu {
+    display: block;
+  }
+
+  .drop-item {
+    padding: 0.5rem 1rem;
+    color: #333;
+    text-decoration: none;
+    white-space: nowrap;
+    text-align: right; /* راست‌چین کردن متن زیرمنوها */
+  }
+
+  .drop-item:hover {
+    background-color: #f7f7f7;
+  }
+
+  .menu-link:after,
+  .drop-item:after {
+    content: "";
+    display: none;
+  }
+   .main-menu {
+    z-index: 1000;
+    margin: 0 82px;
+  }
+}
+/* menu style end */
+
+/* search style start */
+.search {
+  cursor: pointer;
+}
+.search-box {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 60px;
+  background-color: #fff;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  transition: 0.4s;
+  opacity: 0;
+}
+.search-box form {
+  width: 75%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.search-box input {
+  width: 80%;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  color: black;
+  height: 100%;
+}
+
+.search-box input:hover,
+.search-box input:focus {
+  border: none;
+  outline: none;
+}
+
+.search-box input::placeholder {
+  color: black;
+  font-family: "peydaMedium";
+}
+
+.search-box i {
+  padding: 0 10px;
+  cursor: pointer;
+  font-size: 25px;
+}
+
+.search-box .fa-times {
+  font-size: 18px;
+}
+
+.search-box .fa-search {
+  font-size: 22px;
+}
+.search img {
+  width: 20px;
+  height: auto;
+  cursor: pointer;
+}
+.close img {
+  width: 30px;
+  height: auto;
+  cursor: pointer;
+}
+/* search style end */
+
+/* First section start */
+.First-section {
+  width: 100%;
+  height: 100vh;
+  background: rgb(223, 213, 255);
+  background: linear-gradient(
+    107deg,
+    rgba(223, 213, 255, 1) 5%,
+    rgba(255, 255, 255, 1) 23%
+  );
+}
+.First-section-content{
+  padding-top: 64px;
+}
+.First-section-content h1 {
+  font-family: "PeydaBold";
+  font-size: 48px;
+  color: var(--dark-background);
+  text-align: center;
+  letter-spacing: 2%;
+} 
+.First-section-content p{
+  text-align: justify;
+  font-family: 'PeydaMedium';
+  font-size: 18px;
+  line-height: 24px;
+  width: 80%;
+
+}
+
+.circle {
+  position: relative;
+  width: 100px;  /* بزرگ‌تر کردن اندازه دایره */
+  height: 100px; /* بزرگ‌تر کردن اندازه دایره */
+  margin: auto;
+  direction: rtl; /* جهت نوشتار راست به چپ */
+  border: 5px solid white; /* اضافه کردن خط سفید به دور دایره */
+  border-radius: 50%; /* دایره کردن مرز */
+  /* box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);  */
+}
+.circle img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transition-duration: 0.4s;
+  transform: translate(-50%, -50%);
+  width: 70px; /* بزرگ‌تر کردن اندازه تصویر */
+  height: 70px; /* بزرگ‌تر کردن اندازه تصویر */
+}
+
+.circle text {
+  font-family: "PeydaLight";
+  font-size: 50px; /* بزرگ‌تر کردن اندازه فونت */
+  font-weight: bold;
+  z-index: 1000;
+}
+
+.circle svg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  animation: rotate 10s linear infinite reverse; /* تغییر انیمیشن به صورت معکوس برای حالت RTL */
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* First section end */
