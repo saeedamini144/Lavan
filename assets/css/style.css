@@ -30,7 +30,13 @@ html {
     width: 1272px;
     margin: 0 auto;
 } */
-
+body{
+  background: linear-gradient(
+    107deg,
+    rgba(223, 213, 255, 1) 5%,
+    rgba(255, 255, 255, 1) 23%
+  );
+}
 @font-face {
   font-family: "PeydaLight";
   src: url(/assets/fonts/peydaWeb-light.woff) format("woff");
@@ -142,13 +148,13 @@ ul {
   vertical-align: middle;
   z-index: 1000;
 }
-header{
+/* header{
   background: linear-gradient(
     107deg,
     rgba(223, 213, 255, 1) 5%,
     rgba(255, 255, 255, 1) 23%
   );
-}
+} */
 
 /* عمومی */
 .navmenu {
@@ -227,9 +233,9 @@ header{
     border-radius: 100px;
     vertical-align: middle;
   }
-  header {
+  /* header {
     background: linear-gradient(107deg, rgba(223, 213, 255, 1) 11%, rgba(255, 255, 255, 1) 40%);
-  }
+  } */
 }
 /* تنظیمات عمومی برای دسکتاپ */
 @media (min-width: 769px) {
@@ -396,14 +402,15 @@ header{
 
 /* First section start */
 .First-section {
+  position: relative;
   width: 100%;
   height: 100vh;
-  background: rgb(223, 213, 255);
-  background: linear-gradient(
+  /* background: rgb(223, 213, 255); */
+  /* background: linear-gradient(
     107deg,
     rgba(223, 213, 255, 1) 5%,
     rgba(255, 255, 255, 1) 23%
-  );
+  ); */
 }
 .First-section-content{
   padding-top: 64px;
@@ -495,4 +502,144 @@ header{
     width: 100% !important;
   } 
 }
+
+/* First section card style start */
+.main-card-scroll {
+  display: flex;
+  /* height: 100vh; */
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 200px 0 !important;
+}
+
+/* Individual card styles */
+.card {
+  position: absolute;
+  border: none;
+  border-radius: 28px !important;
+  overflow: hidden;
+  width: 408px; /* Default card width */
+  height: 408px;
+  background-color: white;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.card:nth-child(1) {
+  transform: translateX(-75%) translateY(25px) scale(0.65);
+  z-index: 1;
+}
+
+.card:nth-child(2) {
+  transform: translateX(-25%) translateY(25px) scale(0.75);
+  z-index: 2;
+}
+
+.card:nth-child(3) {
+  transform: translateX(0) translateY(0) scale(1);
+  z-index: 3;
+}
+
+.card:nth-child(4) {
+  transform: translateX(25%) translateY(25px) scale(0.75);
+  z-index: 2;
+}
+
+.card:nth-child(5) {
+  transform: translateX(75%) translateY(25px) scale(0.65);
+  z-index: 1;
+}
+
+.card:hover {
+  transform: translateY(-5px) scale(1.05) ;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  transition: 1s ease;
+  z-index: 4;
+}
+.card:nth-child(1):hover{
+  transform: translateY(-5px) translateX(-150px) scale(1.05) ;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  transition: 1s ease;
+  z-index: 4;
+}
+.card:nth-child(5):hover {
+  transform: translateY(-5px) translateX(-150px) scale(1.05);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  transition: 1s ease;
+  z-index: 4;
+}
+.card-img {
+  width: 408px;
+  height: 408px;
+  object-fit: cover;
+}
+
+.card-img-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  color: var(--whiteColor);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.card:hover .card-img-overlay {
+  opacity: 1;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  font-family: "PeydaBold";
+}
+
+.card-text {
+  font-size: 14px;
+  margin-bottom: 0;
+  text-align: center;
+  font-family: "PeydaLight";
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .main-card-scroll {
+    flex-wrap: wrap;
+  }
+
+  .card {
+    position: relative;
+    transform: none;
+    width: 45%; /* Two cards side by side */
+    height: auto;
+    margin: 8px;
+    transform: none !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    width: 100% !important; /* One card per row */
+    height: auto;
+    margin: 0;
+    transform: none !important;
+    margin: 10px 0;
+  }
+}
+/* First section card style end */
+
 /* First section end */
+
+/* second section  start */
+.second-section{
+  height: 100vh;
+  width: 100%;
+}
