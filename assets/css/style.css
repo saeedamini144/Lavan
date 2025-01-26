@@ -14,7 +14,16 @@ Text Domain: Lavan.agancy
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
+/* تنظیمات عمومی برای از موبایل تا تبلت */
+/* @media (max-width: 768px) {
 
+} */
+
+/* تنظیمات عمومی برای  موبایل */
+
+/* @media (max-width: 480px) {
+  
+} */
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
@@ -132,7 +141,27 @@ ul {
   padding: 0;
   margin: 0 !important;
 }
-
+a button svg{
+  transition-duration: 0.5s;
+  
+}
+a button:hover svg{
+  transition-duration: 0.5s;
+  transform: translateX(-100px);
+  overflow: hidden;
+  opacity: 0;
+}
+.Primary-Purple-button button{
+  width: 155px;
+  height: 55px;
+  border-radius: 50px;
+  color: var(--whiteColor);
+  background-color: var(--Primary-Purple);
+  transition-duration: 0.5s;
+}
+.Primary-Purple-button button svg{
+  fill: var(--whiteColor);
+}
 /* menu style start */
 .logo img {
   width: 150px;
@@ -510,7 +539,7 @@ ul {
   justify-content: center;
   align-items: center;
   position: relative;
-  padding: 200px 0 !important;
+  padding: 200px 0 50px 0 !important;
 }
 
 /* Individual card styles */
@@ -642,4 +671,118 @@ ul {
 .second-section{
   height: 100vh;
   width: 100%;
+  /* position: relative; */
+  padding: 84px;
 }
+.services{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+
+} 
+.services h2{
+  font-family: "PeydaBold";
+  font-size: 40px;
+}
+.services p{
+  font-family: "PeydaMedium";
+  font-size: 24px;
+  padding-top: 10px;
+}
+.second-section-card{
+  /* position: relative; */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+/* section2 blog car start */
+.services-card{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  gap:20px;
+} 
+.services-card-img{
+  width: 516px;
+  height: 320px;
+  border-radius: 12px;
+}
+.services-card-body{
+  width: 40%;
+  height: auto;
+}
+.services-card-title{
+  font-family: "PeydaBold";
+  font-size: 32px;
+  line-height: 2rem;
+}
+.services-card-text{
+  font-size: 20px;
+  line-height: 1.9rem;
+  font-family: "PeydaLight";
+}
+
+/* تنظیمات عمومی برای از موبایل تا تبلت */
+@media (max-width: 768px) {
+  .second-section{
+    height: 100vh;
+    width: 100%;
+    padding: 20px;
+  }
+   .second-section-card{
+    display: flex;
+    gap: 0;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  } 
+  .services-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
+    width: 50%;
+  }
+.services-card-img{
+  width: 328px;
+  height: 202px;
+  border-radius: 12px;
+}
+.services-card-body {
+  width: 100%;
+  height: auto;
+}
+}
+
+/* تنظیمات عمومی برای  موبایل */
+
+@media (max-width: 480px) {
+  .second-section{
+    height: 100vh;
+    width: 100%;
+    padding: 20px;
+  }
+
+   .services-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+  }
+.services-card-img{
+  width: 328px;
+  height: 192px;
+  border-radius: 12px;
+}
+
+}
+/* section2 blog car end */
+
