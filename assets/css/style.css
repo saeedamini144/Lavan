@@ -141,6 +141,7 @@ ul {
   padding: 0;
   margin: 0 !important;
 }
+/* button style start */
 a button svg{
   transition-duration: 0.5s;
   
@@ -162,6 +163,18 @@ a button:hover svg{
 .Primary-Purple-button button svg{
   fill: var(--whiteColor);
 }
+/* تنظیمات عمومی برای از موبایل تا تبلت */
+ @media (max-width: 768px) {
+
+} 
+
+/* تنظیمات عمومی برای  موبایل */
+
+ @media (max-width: 480px) {
+  
+} 
+ /* button style end */
+
 /* menu style start */
 .logo img {
   width: 150px;
@@ -524,6 +537,11 @@ a button:hover svg{
 }
 /* تنظیمات عمومی برای موبایل */
 @media (max-width: 768px) {
+  .First-section{
+    height: auto;
+    width: 100%;
+    padding: 20px;
+  }
   .First-section-content h1{
     font-size: 24px;
   }
@@ -640,6 +658,11 @@ a button:hover svg{
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .second-section{
+    height: auto;
+    width: 100%;
+    padding: 20px;
+  }
   .main-card-scroll {
     flex-wrap: wrap;
   }
@@ -669,8 +692,8 @@ a button:hover svg{
 
 /* second section  start */
 .second-section{
-  height: 100vh;
   width: 100%;
+  /* height: 100vh; */
   /* position: relative; */
   padding: 84px;
 }
@@ -729,10 +752,15 @@ a button:hover svg{
 
 /* تنظیمات عمومی برای از موبایل تا تبلت */
 @media (max-width: 768px) {
+
+  .services{
+    align-items: center;
+    margin-bottom: 32px;
+  }
   .second-section{
-    height: 100vh;
     width: 100%;
-    padding: 20px;
+    /* height: 100vh; */
+    padding: 80px 20px 20px 20px;
   }
    .second-section-card{
     display: flex;
@@ -757,6 +785,18 @@ a button:hover svg{
 .services-card-body {
   width: 100%;
   height: auto;
+  margin: 20px;
+  /* margin-bottom: 20px; */
+}
+.services-card-title{
+  font-family: "PeydaBold";
+  font-size: 24px;
+  line-height: 2rem;
+}
+.services-card-text{
+  font-size: 14px;
+  line-height: 1.9rem;
+  font-family: "PeydaLight";
 }
 }
 
@@ -764,9 +804,9 @@ a button:hover svg{
 
 @media (max-width: 480px) {
   .second-section{
-    height: 100vh;
     width: 100%;
-    padding: 20px;
+    /* height: 100vh; */
+    padding: 80px 20px 20px 20px;
   }
 
    .services-card {
@@ -786,3 +826,8 @@ a button:hover svg{
 }
 /* section2 blog car end */
 
+.Third-section{
+  width: 100%;
+  height: 100vh;
+  background-color: var(--dark-background);
+}
