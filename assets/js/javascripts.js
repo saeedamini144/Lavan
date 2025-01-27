@@ -129,25 +129,47 @@ ResponsiveSectionThree.add("(min-width: 769px)", () => {
     scrollTrigger: {
       trigger: ".Third-section",
       pin: true,
-      start: "top tp",
+      start: "top top",
       end: "+=100%",
-      scrub: 5,
-      stagger: 5,
+      scrub: 10, // Reduced scrub value for smoother scrolling
+      stagger: 10,
       markers: true,
     },
     defaults: {
-      duration: 4,
-      ease: "power1.out",
+      duration: 2, // Reduced duration for smoother animations
+      ease: "slow(1,1,false)", // Changed ease for smoother effect
     },
   });
   SectionThree
-    .to(".to-left", {
-      x: 0,
-    })
     .to(".to-right", {
       x: 0,
     })
+    .to(".to-left", {
+      x: 0,
+    })
+    .to(".to-right-2", {
+      x: 0,
+    })
+    .to(".to-left-2", {
+      x: 0,
+    })
+    .to(".to-right-3", {
+      x: 0,
+    })
+    .to(".to-left-3", {
+      x: 0,
+    });
 });
+// دریافت تمامی چایلد ها به صورت یکچا با عث کاهش میزان کد می شود
+// document.querySelectorAll(".Second-section .child").forEach((child, index) => {
+//   SectionTwo.to(child, {
+//     x: 0,
+//     y: 0,
+//     opacity: 1,
+//     delay: index * 0.2, // تاخیر برای هر چایلد
+//   });
+// });
+// });
 
 
 // const horizontalSections = gsap.utils.toArray('section.horizontal')

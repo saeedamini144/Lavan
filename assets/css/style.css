@@ -958,69 +958,52 @@ header {
   scale: 0.9;
 }
 
-.to-left {
+.to-left,
+.to-left-2,
+.to-left-3 {
   transform: translateX(100vw);
+  transition: transform 0.4s ease
 }
 
-.to-right {
+.to-right,
+.to-right-2,
+.to-right-3 {
   transform: translateX(-100vw);
+  transition: transform 0.4s ease
 }
 
-/* .horizontal .item {
-  position: relative;
-  padding: 150px 80px;
-  flex: 0 0 500px;
-  height: calc(100vh - 300px);
-  display: flex;
-  align-items: center;
-  line-height: 1.7;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  border-right: 1px solid rgba(0, 0, 0, 0.06);
-  background-color: transparent;
-} */
+/* تنظیمات عمومی برای از موبایل تا تبلت */
+@media (max-width: 768px) {
+  .Third-section {
+    padding: 84px 10px 84px 10px;
+  }
 
-/* .horizontal .item:before {
-  position: absolute;
-  font-size: 100px;
-  opacity: .13;
-  font-weight: bold;
-  z-index: -1;
-  -webkit-transform: translate(-30px, -50px);
-  transform: translate(-30px, -50px);
-  line-height: 1;
-} */
+  .animation-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+  }
 
-/* .horizontal .animation-wrap.to-right {
-  counter-reset: item;
-  float: left;
+  .to-left,
+  .to-left-2,
+  .to-left-3 {
+    transform: translateX(0);
+    transition: transform 0.4s ease
+  }
+
+  .to-right,
+  .to-right-2,
+  .to-right-3 {
+    transform: translateX(0);
+    transition: transform 0.4s ease
+  }
 }
 
-.horizontal .animation-wrap.to-left {
-  counter-reset: item 11;
-  float: right;
-}
+/* تنظیمات عمومی برای  موبایل */
 
-.horizontal .animation-wrap.to-right .item:before {
-  counter-increment: item;
-  content: counter(item);
-}
-
-.horizontal .animation-wrap.to-left .item:before {
-  counter-increment: item -1;
-  content: counter(item);
-} */
-
-
-
-/* .horizontal .animation-wrap .item:nth-child(2n+2) {
-  align-items: flex-start;
-}
-
-.horizontal .animation-wrap .item:nth-child(4n+4) {
-  align-items: flex-end;
+/* @media (max-width: 480px) {
+  
 } */
 
 /* third section end */
