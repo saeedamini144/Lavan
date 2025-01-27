@@ -28,6 +28,7 @@ html {
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
+
 * {
   direction: rtl;
   unicode-bidi: embed;
@@ -35,25 +36,28 @@ html {
   padding: 0;
   box-sizing: border-box;
 }
+
 /* .container {
     width: 1272px;
     margin: 0 auto;
 } */
-body{
+/* body{
   background: linear-gradient(
     107deg,
     rgba(223, 213, 255, 1) 5%,
     rgba(255, 255, 255, 1) 23%
   );
-}
+} */
 @font-face {
   font-family: "PeydaLight";
   src: url(/assets/fonts/peydaWeb-light.woff) format("woff");
 }
+
 @font-face {
   font-family: "PeydaMedium";
   src: url(/assets/fonts/PeydaWeb-Medium.woff) format("woff");
 }
+
 @font-face {
   font-family: "PeydaBold";
   src: url(/assets/fonts/PeydaWeb-Bold.woff) format("woff");
@@ -63,20 +67,24 @@ body{
   font-family: "DanaRegular";
   src: url(/assets/fonts/dana-fanum-regular.woff) format("woff");
 }
+
 @font-face {
   font-family: "DanaMedium";
   src: url(/assets/fonts/dana-fanum-medium.woff) format("woff");
 }
+
 @font-face {
   font-family: "DanaBold";
   src: url(/assets/fonts/dana-fanum-bold.woff) format("woff");
 }
+
 img {
   object-fit: contain;
   width: 100%;
   height: auto;
-} 
-textPath{
+}
+
+textPath {
   direction: ltr !important;
 }
 
@@ -137,22 +145,26 @@ p {
   font-weight: 400;
   line-height: 26px;
 }
+
 ul {
   padding: 0;
   margin: 0 !important;
 }
+
 /* button style start */
-a button svg{
+a button svg {
   transition-duration: 0.5s;
-  
+
 }
-a button:hover svg{
+
+a button:hover svg {
   transition-duration: 0.5s;
   transform: translateX(-100px);
   overflow: hidden;
   opacity: 0;
 }
-.Primary-Purple-button button{
+
+.Primary-Purple-button button {
   width: 155px;
   height: 55px;
   border-radius: 50px;
@@ -160,26 +172,26 @@ a button:hover svg{
   background-color: var(--Primary-Purple);
   transition-duration: 0.5s;
 }
-.Primary-Purple-button button svg{
+
+.Primary-Purple-button button svg {
   fill: var(--whiteColor);
 }
-/* تنظیمات عمومی برای از موبایل تا تبلت */
- @media (max-width: 768px) {
 
-} 
+/* تنظیمات عمومی برای از موبایل تا تبلت */
+@media (max-width: 768px) {}
 
 /* تنظیمات عمومی برای  موبایل */
 
- @media (max-width: 480px) {
-  
-} 
- /* button style end */
+@media (max-width: 480px) {}
+
+/* button style end */
 
 /* menu style start */
 .logo img {
   width: 150px;
   height: auto;
 }
+
 .main-menu {
   display: flex;
   justify-content: space-between;
@@ -190,18 +202,18 @@ a button:hover svg{
   vertical-align: middle;
   z-index: 1000;
 }
-/* header{
-  background: linear-gradient(
-    107deg,
-    rgba(223, 213, 255, 1) 5%,
-    rgba(255, 255, 255, 1) 23%
-  );
-} */
+
+header {
+  background: linear-gradient(107deg,
+      rgba(223, 213, 255, 1) 5%,
+      rgba(255, 255, 255, 1) 23%);
+}
 
 /* عمومی */
 .navmenu {
   position: relative;
 }
+
 .offcanvas-menu {
   display: none;
   position: fixed;
@@ -215,6 +227,7 @@ a button:hover svg{
   z-index: 999;
   padding: 1rem;
 }
+
 .burger-menu {
   display: none;
   font-size: 1.5rem;
@@ -222,17 +235,20 @@ a button:hover svg{
   border: none;
   cursor: pointer;
 }
+
 .menu-item {
   list-style: none;
   margin: 0;
   padding: 0;
 }
+
 .menu-link {
   display: block;
   text-decoration: none;
   color: #333;
   padding: 0.5rem 0;
 }
+
 .drop-menu,
 .drop-second-menu,
 .drop-third-menu {
@@ -240,21 +256,24 @@ a button:hover svg{
   list-style: none;
   padding-left: 1rem;
 }
-.dropdown > .menu-link:after,
-.drop-submenu > .drop-item:after {
+
+.dropdown>.menu-link:after,
+.drop-submenu>.drop-item:after {
   content: "▼";
   float: right;
   margin-left: 0.5rem;
   font-size: 0.8rem;
   transition: transform 0.2s;
 }
-.dropdown.open > .menu-link:after,
-.drop-submenu.open > .drop-item:after {
+
+.dropdown.open>.menu-link:after,
+.drop-submenu.open>.drop-item:after {
   transform: rotate(180deg);
 }
-.dropdown.open > .drop-menu,
-.drop-submenu.open > .drop-second-menu,
-.drop-submenu.open > .drop-third-menu {
+
+.dropdown.open>.drop-menu,
+.drop-submenu.open>.drop-second-menu,
+.drop-submenu.open>.drop-third-menu {
   display: block;
 }
 
@@ -263,9 +282,11 @@ a button:hover svg{
   .burger-menu {
     display: block;
   }
+
   .offcanvas-menu {
     display: block;
   }
+
   .main-menu {
     display: flex;
     justify-content: space-around;
@@ -275,21 +296,25 @@ a button:hover svg{
     border-radius: 100px;
     vertical-align: middle;
   }
-  /* header {
+
+  header {
     background: linear-gradient(107deg, rgba(223, 213, 255, 1) 11%, rgba(255, 255, 255, 1) 40%);
-  } */
+  }
 }
+
 /* تنظیمات عمومی برای دسکتاپ */
 @media (min-width: 769px) {
   .burger-menu {
-    display: none; /* مخفی کردن دکمه برگر در دسکتاپ */
+    display: none;
+    /* مخفی کردن دکمه برگر در دسکتاپ */
   }
 
   .offcanvas-menu {
     position: static;
     display: flex;
     flex-direction: row;
-    justify-content: flex-end; /* راست‌چین کردن منو */
+    justify-content: flex-end;
+    /* راست‌چین کردن منو */
     width: auto;
     height: auto;
     background: none;
@@ -324,7 +349,8 @@ a button:hover svg{
   .drop-third-menu {
     position: absolute;
     top: 100%;
-    right: 0; /* نمایش زیرمنوها از سمت راست */
+    right: 0;
+    /* نمایش زیرمنوها از سمت راست */
     display: none;
     background: var(--whiteColor);
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
@@ -337,13 +363,14 @@ a button:hover svg{
 
   .drop-second-menu,
   .drop-third-menu {
-    right: 100%; /* نمایش زیرمنوهای چندسطحی به سمت چپ */
+    right: 100%;
+    /* نمایش زیرمنوهای چندسطحی به سمت چپ */
     top: 0;
   }
 
-  .dropdown:hover > .drop-menu,
-  .drop-submenu:hover > .drop-second-menu,
-  .drop-submenu:hover > .drop-third-menu {
+  .dropdown:hover>.drop-menu,
+  .drop-submenu:hover>.drop-second-menu,
+  .drop-submenu:hover>.drop-third-menu {
     display: block;
   }
 
@@ -352,7 +379,8 @@ a button:hover svg{
     color: #333;
     text-decoration: none;
     white-space: nowrap;
-    text-align: right; /* راست‌چین کردن متن زیرمنوها */
+    text-align: right;
+    /* راست‌چین کردن متن زیرمنوها */
   }
 
   .drop-item:hover {
@@ -364,17 +392,20 @@ a button:hover svg{
     content: "";
     display: none;
   }
-   .main-menu {
+
+  .main-menu {
     z-index: 1000;
     margin: 0 82px;
   }
 }
+
 /* menu style end */
 
 /* search style start */
 .search {
   cursor: pointer;
 }
+
 .search-box {
   position: fixed;
   top: 0;
@@ -389,6 +420,7 @@ a button:hover svg{
   transition: 0.4s;
   opacity: 0;
 }
+
 .search-box form {
   width: 75%;
   height: 100%;
@@ -430,16 +462,19 @@ a button:hover svg{
 .search-box .fa-search {
   font-size: 22px;
 }
+
 .search img {
   width: 20px;
   height: auto;
   cursor: pointer;
 }
+
 .close img {
   width: 30px;
   height: auto;
   cursor: pointer;
 }
+
 /* search style end */
 
 /* First section start */
@@ -448,24 +483,25 @@ a button:hover svg{
   width: 100%;
   height: 100vh;
   /* background: rgb(223, 213, 255); */
-  /* background: linear-gradient(
-    107deg,
-    rgba(223, 213, 255, 1) 5%,
-    rgba(255, 255, 255, 1) 23%
-  ); */
+  background: linear-gradient(107deg,
+      rgba(223, 213, 255, 1) 5%,
+      rgba(255, 255, 255, 1) 23%);
 }
-.First-section-content{
+
+.First-section-content {
   padding-top: 64px;
-  width: 50% !important ;
+  width: 50% !important;
 }
+
 .First-section-content h1 {
   font-family: "PeydaBold";
   font-size: 48px;
   color: var(--dark-background);
   text-align: center;
   letter-spacing: 2%;
-} 
-.First-section-content p{
+}
+
+.First-section-content p {
   text-align: justify;
   font-family: 'PeydaMedium';
   font-size: 18px;
@@ -476,27 +512,36 @@ a button:hover svg{
 
 .circle {
   position: relative;
-  width: 100px;  /* بزرگ‌تر کردن اندازه دایره */
-  height: 100px; /* بزرگ‌تر کردن اندازه دایره */
+  width: 100px;
+  /* بزرگ‌تر کردن اندازه دایره */
+  height: 100px;
+  /* بزرگ‌تر کردن اندازه دایره */
   margin: auto;
-  direction: rtl; /* جهت نوشتار راست به چپ */
-  border: 5px solid white; /* اضافه کردن خط سفید به دور دایره */
-  border-radius: 50%; /* دایره کردن مرز */
+  direction: rtl;
+  /* جهت نوشتار راست به چپ */
+  border: 5px solid white;
+  /* اضافه کردن خط سفید به دور دایره */
+  border-radius: 50%;
+  /* دایره کردن مرز */
   /* box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);  */
 }
+
 .circle img {
   position: absolute;
   top: 50%;
   left: 50%;
   transition-duration: 0.4s;
   transform: translate(-50%, -50%);
-  width: 70px; /* بزرگ‌تر کردن اندازه تصویر */
-  height: 70px; /* بزرگ‌تر کردن اندازه تصویر */
+  width: 70px;
+  /* بزرگ‌تر کردن اندازه تصویر */
+  height: 70px;
+  /* بزرگ‌تر کردن اندازه تصویر */
 }
 
 .circle text {
   font-family: "PeydaLight";
-  font-size: 50px; /* بزرگ‌تر کردن اندازه فونت */
+  font-size: 50px;
+  /* بزرگ‌تر کردن اندازه فونت */
   font-weight: bold;
   z-index: 1000;
 }
@@ -507,13 +552,15 @@ a button:hover svg{
   top: 0;
   width: 100%;
   height: 100%;
-  animation: rotate 10s linear infinite reverse; /* تغییر انیمیشن به صورت معکوس برای حالت RTL */
+  animation: rotate 10s linear infinite reverse;
+  /* تغییر انیمیشن به صورت معکوس برای حالت RTL */
 }
 
 @keyframes rotate {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -521,33 +568,38 @@ a button:hover svg{
 
 /* تنظیمات عمومی برای دسکتاپ */
 @media (min-width: 769px) {
+
   /* .First-section{
     width: 50%;
   } */
-  .First-section-content h1{
+  .First-section-content h1 {
     font-size: 28px;
   }
+
   .First-section-content p {
     text-align: justify;
     font-family: 'PeydaMedium';
     font-size: 16px;
     line-height: 24px;
     /* width: 80%; */
+  }
 }
-}
+
 /* تنظیمات عمومی برای موبایل */
 @media (max-width: 768px) {
-  .First-section{
+  .First-section {
     height: auto;
     width: 100%;
     padding: 20px;
   }
-  .First-section-content h1{
+
+  .First-section-content h1 {
     font-size: 24px;
   }
-  .First-section-content p{
+
+  .First-section-content p {
     width: 100% !important;
-  } 
+  }
 }
 
 /* First section card style start */
@@ -566,7 +618,8 @@ a button:hover svg{
   border: none;
   border-radius: 28px !important;
   overflow: hidden;
-  width: 408px; /* Default card width */
+  width: 408px;
+  /* Default card width */
   height: 408px;
   background-color: white;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
@@ -599,23 +652,26 @@ a button:hover svg{
 }
 
 .card:hover {
-  transform: translateY(-5px) scale(1.05) ;
+  transform: translateY(-5px) scale(1.05);
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
   transition: 1s ease;
   z-index: 4;
 }
-.card:nth-child(1):hover{
-  transform: translateY(-5px) translateX(-150px) scale(1.05) ;
+
+.card:nth-child(1):hover {
+  transform: translateY(-5px) translateX(-150px) scale(1.05);
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
   transition: 1s ease;
   z-index: 4;
 }
+
 .card:nth-child(5):hover {
   transform: translateY(-5px) translateX(-150px) scale(1.05);
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
   transition: 1s ease;
   z-index: 4;
 }
+
 .card-img {
   width: 408px;
   height: 408px;
@@ -658,11 +714,12 @@ a button:hover svg{
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .second-section{
+  .second-section {
     height: auto;
     width: 100%;
     padding: 20px;
   }
+
   .main-card-scroll {
     flex-wrap: wrap;
   }
@@ -670,7 +727,8 @@ a button:hover svg{
   .card {
     position: relative;
     transform: none;
-    width: 45%; /* Two cards side by side */
+    width: 45%;
+    /* Two cards side by side */
     height: auto;
     margin: 8px;
     transform: none !important;
@@ -679,42 +737,48 @@ a button:hover svg{
 
 @media (max-width: 480px) {
   .card {
-    width: 100% !important; /* One card per row */
+    width: 100% !important;
+    /* One card per row */
     height: auto;
     margin: 0;
     transform: none !important;
     margin: 10px 0;
   }
 }
+
 /* First section card style end */
 
 /* First section end */
 
 /* second section  start */
-.second-section{
+.second-section {
   width: 100%;
   /* height: 100vh; */
   /* position: relative; */
-  padding: 84px;
+  padding: 120px 84px 120px 84px;
 }
-.services{
+
+.services {
   display: flex;
   flex-direction: column;
   justify-content: center;
   position: sticky;
-  top: 0;
+  top: 50%;
 
-} 
-.services h2{
+}
+
+.services h2 {
   font-family: "PeydaBold";
   font-size: 40px;
 }
-.services p{
+
+.services p {
   font-family: "PeydaMedium";
   font-size: 24px;
   padding-top: 10px;
 }
-.second-section-card{
+
+.second-section-card {
   /* position: relative; */
   width: 100%;
   display: flex;
@@ -723,28 +787,32 @@ a button:hover svg{
 }
 
 /* section2 blog car start */
-.services-card{
+.services-card {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  gap:20px;
-} 
-.services-card-img{
+  gap: 20px;
+}
+
+.services-card-img {
   width: 516px;
   height: 320px;
   border-radius: 12px;
 }
-.services-card-body{
+
+.services-card-body {
   width: 40%;
   height: auto;
 }
-.services-card-title{
+
+.services-card-title {
   font-family: "PeydaBold";
   font-size: 32px;
   line-height: 2rem;
 }
-.services-card-text{
+
+.services-card-text {
   font-size: 20px;
   line-height: 1.9rem;
   font-family: "PeydaLight";
@@ -753,22 +821,25 @@ a button:hover svg{
 /* تنظیمات عمومی برای از موبایل تا تبلت */
 @media (max-width: 768px) {
 
-  .services{
+  .services {
     align-items: center;
     margin-bottom: 32px;
   }
-  .second-section{
+
+  .second-section {
     width: 100%;
     /* height: 100vh; */
     padding: 80px 20px 20px 20px;
   }
-   .second-section-card{
+
+  .second-section-card {
     display: flex;
     gap: 0;
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
-  } 
+  }
+
   .services-card {
     display: flex;
     flex-wrap: wrap;
@@ -777,39 +848,43 @@ a button:hover svg{
     gap: 20px;
     width: 50%;
   }
-.services-card-img{
-  width: 328px;
-  height: 202px;
-  border-radius: 12px;
-}
-.services-card-body {
-  width: 100%;
-  height: auto;
-  margin: 20px;
-  /* margin-bottom: 20px; */
-}
-.services-card-title{
-  font-family: "PeydaBold";
-  font-size: 24px;
-  line-height: 2rem;
-}
-.services-card-text{
-  font-size: 14px;
-  line-height: 1.9rem;
-  font-family: "PeydaLight";
-}
+
+  .services-card-img {
+    width: 328px;
+    height: 202px;
+    border-radius: 12px;
+  }
+
+  .services-card-body {
+    width: 100%;
+    height: auto;
+    margin: 20px;
+    /* margin-bottom: 20px; */
+  }
+
+  .services-card-title {
+    font-family: "PeydaBold";
+    font-size: 24px;
+    line-height: 2rem;
+  }
+
+  .services-card-text {
+    font-size: 14px;
+    line-height: 1.9rem;
+    font-family: "PeydaLight";
+  }
 }
 
 /* تنظیمات عمومی برای  موبایل */
 
 @media (max-width: 480px) {
-  .second-section{
+  .second-section {
     width: 100%;
     /* height: 100vh; */
     padding: 80px 20px 20px 20px;
   }
 
-   .services-card {
+  .services-card {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -817,17 +892,135 @@ a button:hover svg{
     gap: 20px;
     width: 100%;
   }
-.services-card-img{
-  width: 328px;
-  height: 192px;
-  border-radius: 12px;
-}
+
+  .services-card-img {
+    width: 328px;
+    height: 192px;
+    border-radius: 12px;
+  }
 
 }
+
 /* section2 blog car end */
 
-.Third-section{
+/* third section start */
+
+.Third-section {
   width: 100%;
   height: 100vh;
   background-color: var(--dark-background);
+  padding: 84px;
+  margin: auto;
+  overflow: hidden;
 }
+
+.Third-section-content {
+  margin: auto;
+}
+
+.Third-section-content h2 {
+  font-family: "PeydaBold";
+  font-size: 32px;
+  color: var(--whiteColor);
+  text-align: center;
+}
+
+.Third-section-content p {
+  font-family: "PeydaLight";
+  font-size: 18px;
+  line-height: 2em;
+  color: var(--whiteColor);
+  text-align: center;
+}
+
+.horizontal {
+  margin: 40px 0 40px 0;
+}
+
+.animation-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.item {
+  width: 100px;
+  height: 100px;
+  filter: grayscale(80%);
+  transition: 0.3s ease;
+  position: relative;
+}
+
+.animation-wrap img:hover {
+  filter: grayscale(0%) brightness(5);
+  transition: 0.3s ease;
+  box-shadow: 1px 1px 8px 2px #A4BDFE, inset 1px 1px 8px 2px #A4BDFE;
+  border-radius: 5px;
+  scale: 0.9;
+}
+
+.to-left {
+  transform: translateX(100vw);
+}
+
+.to-right {
+  transform: translateX(-100vw);
+}
+
+/* .horizontal .item {
+  position: relative;
+  padding: 150px 80px;
+  flex: 0 0 500px;
+  height: calc(100vh - 300px);
+  display: flex;
+  align-items: center;
+  line-height: 1.7;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border-right: 1px solid rgba(0, 0, 0, 0.06);
+  background-color: transparent;
+} */
+
+/* .horizontal .item:before {
+  position: absolute;
+  font-size: 100px;
+  opacity: .13;
+  font-weight: bold;
+  z-index: -1;
+  -webkit-transform: translate(-30px, -50px);
+  transform: translate(-30px, -50px);
+  line-height: 1;
+} */
+
+/* .horizontal .animation-wrap.to-right {
+  counter-reset: item;
+  float: left;
+}
+
+.horizontal .animation-wrap.to-left {
+  counter-reset: item 11;
+  float: right;
+}
+
+.horizontal .animation-wrap.to-right .item:before {
+  counter-increment: item;
+  content: counter(item);
+}
+
+.horizontal .animation-wrap.to-left .item:before {
+  counter-increment: item -1;
+  content: counter(item);
+} */
+
+
+
+/* .horizontal .animation-wrap .item:nth-child(2n+2) {
+  align-items: flex-start;
+}
+
+.horizontal .animation-wrap .item:nth-child(4n+4) {
+  align-items: flex-end;
+} */
+
+/* third section end */
