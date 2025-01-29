@@ -28,6 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 //animation gsap
+
 // Initialize a new Lenis instance for smooth scrolling
 const lenis = new Lenis();
 
@@ -37,7 +38,7 @@ lenis.on('scroll', ScrollTrigger.update);
 // Add Lenis's requestAnimationFrame (raf) method to GSAP's ticker
 // This ensures Lenis's smooth scroll animation updates on each GSAP tick
 gsap.ticker.add((time) => {
-  lenis.raf(time * 2000); // Convert time from seconds to milliseconds
+  lenis.raf(time * 1000); // Convert time from seconds to milliseconds
 });
 
 // Disable lag smoothing in GSAP to prevent any delay in scroll animations
@@ -147,13 +148,13 @@ ResponsiveSectionThree.add("(min-width: 769px)", () => {
       start: "top top",
       end: "+=100%",
       // end: 'bootom bottom',
-      scrub: 10, // Reduced scrub value for smoother scrolling
-      stagger: 10,
+      scrub: 1, // Reduced scrub value for smoother scrolling
+      stagger: 0.5,
       markers: true,
       // pinSpacing: false, // Ensure the section stays pinned until the animation ends
     },
     defaults: {
-      duration: 4, // Reduced duration for smoother animations
+      duration: 5, // Reduced duration for smoother animations
       ease: "slow(1,1,false)", // Changed ease for smoother effect
     },
   });
