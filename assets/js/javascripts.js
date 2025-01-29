@@ -28,16 +28,31 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 //animation gsap
-gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+// Initialize a new Lenis instance for smooth scrolling
+const lenis = new Lenis();
 
-let container = document.querySelector("body");
+// Synchronize Lenis scrolling with GSAP's ScrollTrigger plugin
+lenis.on('scroll', ScrollTrigger.update);
 
-let height;
-function setHeight() {
-  height = container.scrollHeight; // Use scrollHeight instead of clientHeight
-  document.body.style.height = height + "px";
-}
-ScrollTrigger.addEventListener("refreshInit", setHeight);
+// Add Lenis's requestAnimationFrame (raf) method to GSAP's ticker
+// This ensures Lenis's smooth scroll animation updates on each GSAP tick
+gsap.ticker.add((time) => {
+  lenis.raf(time * 2000); // Convert time from seconds to milliseconds
+});
+
+// Disable lag smoothing in GSAP to prevent any delay in scroll animations
+gsap.ticker.lagSmoothing(0);
+
+// gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+
+// let container = document.querySelector("body");
+
+// let height;
+// function setHeight() {
+//   height = container.scrollHeight; // Use scrollHeight instead of clientHeight
+//   document.body.style.height = height + "px";
+// }
+// ScrollTrigger.addEventListener("refreshInit", setHeight);
 
 // smooth scrolling container
 // gsap.to(container, {
@@ -131,12 +146,14 @@ ResponsiveSectionThree.add("(min-width: 769px)", () => {
       pin: true,
       start: "top top",
       end: "+=100%",
+      // end: 'bootom bottom',
       scrub: 10, // Reduced scrub value for smoother scrolling
       stagger: 10,
       markers: true,
+      // pinSpacing: false, // Ensure the section stays pinned until the animation ends
     },
     defaults: {
-      duration: 2, // Reduced duration for smoother animations
+      duration: 4, // Reduced duration for smoother animations
       ease: "slow(1,1,false)", // Changed ease for smoother effect
     },
   });

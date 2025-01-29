@@ -965,12 +965,15 @@ header {
   transition: transform 0.4s ease
 }
 
+
 .to-right,
 .to-right-2,
 .to-right-3 {
   transform: translateX(-100vw);
   transition: transform 0.4s ease
 }
+
+
 
 /* تنظیمات عمومی برای از موبایل تا تبلت */
 @media (max-width: 768px) {
@@ -1007,3 +1010,66 @@ header {
 } */
 
 /* third section end */
+
+/* fourth section start  */
+
+.Fourth-section {
+  width: 100%;
+  height: 100vh;
+  padding: 120px 0 120px 0;
+  margin: auto;
+  overflow: hidden;
+}
+
+.Fourth-section-content {
+  margin: auto;
+  text-align: center;
+}
+
+.Fourth-section-content h2 {
+  font-family: "PeydaBold";
+  font-size: 32px;
+  color: var(--blackColor);
+  text-align: center;
+}
+
+.Fourth-section-content p {
+  font-family: "PeydaLight";
+  font-size: 18px;
+  line-height: 2em;
+  color: var(--blackColor);
+  text-align: center;
+}
+
+/* fourth section end */
+
+/* fifth section start */
+.Fifth-section {
+  width: 100%;
+  height: 100vh;
+  padding: 120px 0 120px 0;
+  margin: auto;
+  overflow: hidden;
+}
+
+.Fifth-section-content {
+  margin: auto;
+  text-align: center;
+}
+
+.Fifth-section-content h2 {
+  font-family: "PeydaBold";
+  font-size: 32px;
+  color: var(--blackColor);
+  text-align: center;
+}
+
+.Fifth-section-content p {
+  font-family: "PeydaLight";
+  font-size: 18px;
+  line-height: 2em;
+  color: var(--blackColor);
+  text-align: center;
+}
+
+/* fifth section end */
