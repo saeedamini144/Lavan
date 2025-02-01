@@ -96,7 +96,7 @@ ResponsiveSectionOne.add("(min-width: 769px)", () => {
       end: "+=100%", // مدت زمان پین (به درصد ارتفاع سکشن)
       scrub: 1.5, // حرکت نرم با اسکرول
       stagger: 0.5,
-      markers: true, // نمایش مارکر برای تست
+      // markers: true, // نمایش مارکر برای تست
     },
     defaults: {
       duration: 1,
@@ -147,14 +147,13 @@ ResponsiveSectionThree.add("(min-width: 769px)", () => {
       pin: true,
       start: "top top",
       end: "+=100%",
-      // end: 'bootom bottom',
       scrub: 1, // Reduced scrub value for smoother scrolling
       stagger: 0.5,
-      markers: true,
+      // markers: true,
       // pinSpacing: false, // Ensure the section stays pinned until the animation ends
     },
     defaults: {
-      duration: 5, // Reduced duration for smoother animations
+      duration: 1, // Reduced duration for smoother animations
       ease: "slow(1,1,false)", // Changed ease for smoother effect
     },
   });
@@ -189,7 +188,7 @@ ResponsiveSectionFour.add("(min-width: 769px)", () => {
       end: "+=100%",
       scrub: 1,
       stagger: 0.5,
-      markers: true,
+      // markers: true,
     },
     defaults: {
       duration: 1,

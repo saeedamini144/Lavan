@@ -46,6 +46,10 @@ html {
   overflow-x: hidden;
 }
 
+::placeholder {
+  font-family: "PeydaLight";
+}
+
 * {
   direction: rtl;
   unicode-bidi: embed;
@@ -166,6 +170,10 @@ p {
 ul {
   padding: 0;
   margin: 0 !important;
+}
+
+li {
+  list-style: none;
 }
 
 /* button style start */
@@ -978,7 +986,7 @@ header {
 .to-left,
 .to-left-2,
 .to-left-3 {
-  transform: translateX(100vw);
+  transform: translate(100vw);
   transition: transform 0.4s ease
 }
 
@@ -1061,7 +1069,7 @@ header {
   justify-content: center;
   gap: 20px;
   padding: 100px 0 100px 0;
-  transform: translateX(1000px);
+  transform: translateX(100vw);
   transition: 0.5s;
 }
 
@@ -1147,7 +1155,7 @@ header {
 .Fifth-section {
   width: 100%;
   height: auto;
-  padding: 120px 0 120px 0;
+  padding: 50px 0 120px 0;
   margin: auto;
   overflow: hidden;
 }
@@ -1258,3 +1266,89 @@ header {
 }
 
 /* fifth section end */
+
+/* footer section start */
+footer {
+  background-color: var(--dark-background);
+  color: var(--whiteColor);
+  padding: 90px 84px 90px 84px;
+}
+
+.icon-list img {
+  width: 24px;
+  height: auto;
+
+}
+
+footer h3 {
+  font-family: "PeydaBold";
+  font-size: 40px;
+  line-height: 2rem;
+}
+
+.contact-list li {
+  font-family: "Peydamedium";
+  font-size: 18px;
+  line-height: 1.5rem;
+  margin: 20px 0;
+}
+
+.social-icon li a img {
+  width: 24px;
+}
+
+.search__input {
+  width: 100%;
+  padding: 12px 24px;
+  font-family: "PeydaLight";
+  background-color: transparent;
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--whiteColor);
+
+  background-image: url("/assets/pic/search-normal.svg");
+  background-repeat: no-repeat;
+  background-size: 18px 18px;
+  background-position: 95% center;
+
+  border-radius: 50px;
+  border: 1px solid var(--whiteColor);
+  transition: all 250ms ease-in-out;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+
+.search__input::placeholder {
+  color: var(--whiteColor);
+  padding-right: 20px;
+}
+
+.search__input:hover,
+.search__input:focus {
+  padding: 24px 0;
+  outline: 0;
+  border: 1px solid transparent;
+  border-bottom: 1px solid var(--whiteColor);
+  border-radius: 0;
+
+  /* تغییر موقعیت آیکون هنگام هاور و فوکوس */
+  background-position: 0 center;
+}
+
+/* تنظیمات عمومی برای از موبایل تا تبلت */
+@media (max-width: 768px) {
+  footer {
+    padding: 90px 10px 90px 10px;
+    gap: 15px;
+  }
+
+  footer h3 {
+    font-size: 28px;
+  }
+
+  .contact-list li {
+    font-size: 16px;
+  }
+}
+
+/* footer section end */
