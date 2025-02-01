@@ -178,6 +178,30 @@ ResponsiveSectionThree.add("(min-width: 769px)", () => {
       x: 0,
     });
 });
+
+let ResponsiveSectionFour = gsap.matchMedia();
+ResponsiveSectionFour.add("(min-width: 769px)", () => {
+  const SectionFour = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".Fourth-section",
+      pin: true,
+      start: "top top",
+      end: "+=100%",
+      scrub: 1,
+      stagger: 0.5,
+      markers: true,
+    },
+    defaults: {
+      duration: 1,
+      ease: "power1.out",
+    },
+  });
+  SectionFour
+    .to(".advantage-section", {
+      x: 0,
+    });
+});
+
 // دریافت تمامی چایلد ها به صورت یکچا با عث کاهش میزان کد می شود
 // document.querySelectorAll(".Second-section .child").forEach((child, index) => {
 //   SectionTwo.to(child, {

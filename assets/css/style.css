@@ -626,7 +626,7 @@ header {
   justify-content: center;
   align-items: center;
   position: relative;
-  padding: 200px 0 50px 0 !important;
+  padding: 100px 0 50px 0 !important;
 }
 
 /* Individual card styles */
@@ -1061,6 +1061,8 @@ header {
   justify-content: center;
   gap: 20px;
   padding: 100px 0 100px 0;
+  transform: translateX(1000px);
+  transition: 0.5s;
 }
 
 .advantage-card:nth-child(1) {
@@ -1135,6 +1137,7 @@ header {
     flex-wrap: wrap;
     gap: 20px;
     padding: 100px 0 100px 0;
+    transform: translateX(0);
   }
 }
 
@@ -1143,7 +1146,7 @@ header {
 /* fifth section start */
 .Fifth-section {
   width: 100%;
-  height: 100vh;
+  height: auto;
   padding: 120px 0 120px 0;
   margin: auto;
   overflow: hidden;
@@ -1167,6 +1170,91 @@ header {
   line-height: 2em;
   color: var(--blackColor);
   text-align: center;
+}
+
+.Blog-card {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: -6px -6px 40px #00000017;
+  height: 100%;
+  overflow: hidden;
+}
+
+.Blog-card-img img {
+  width: 100%;
+  height: 228px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.Blog-card-body {
+  padding-top: 24px;
+  position: relative;
+}
+
+.Blog-card-body::before {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 75%;
+  bottom: 20px;
+  background-color: var(--light-purple2);
+  /* margin: 16px 0; */
+  position: absolute;
+  right: -16px;
+  bottom: -45px;
+  z-index: -1;
+}
+
+.Blog-card-title {
+  font-family: "PeydaBold";
+  font-size: 20px;
+  line-height: 2rem;
+  color: var(--blackColor);
+}
+
+.Blog-card-excerept {
+  font-family: "PeydaLight";
+  font-size: 16px;
+  line-height: 1.5rem;
+}
+
+/* .Blog-card-meta {
+  padding-top: 16px;
+} */
+
+.Blog-card-meta span {
+  font-family: "PeydaLight";
+  font-size: 12px;
+  line-height: 1.2rem;
+  color: var(--blackColor);
+}
+
+.Blog-card-meta span:nth-child(1)::after {
+  content: " | ";
+  padding: 0 5px;
+}
+
+.Blog-button button {
+  width: 192px;
+  height: 45px;
+  border-radius: 50px;
+  font-family: "PeydaMedium";
+  font-size: 16px;
+  color: var(--text-purple);
+  background-color: var(--light-purple);
+  overflow: hidden;
+}
+
+.Blog-button button svg {
+  fill: var(--text-purple);
+}
+
+.blog-card-button img {
+  width: 33px;
 }
 
 /* fifth section end */
