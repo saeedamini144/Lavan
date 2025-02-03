@@ -253,6 +253,15 @@ header {
   padding: 1rem;
 }
 
+.offcanvas-logo {
+  text-align: center;
+}
+
+.offcanvas-logo img {
+  width: 150px;
+  height: auto;
+}
+
 .burger-menu {
   display: none;
   font-size: 1.5rem;
