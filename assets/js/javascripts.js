@@ -146,37 +146,27 @@ ResponsiveSectionThree.add("(min-width: 769px)", () => {
       trigger: ".Third-section",
       pin: true,
       start: "top top",
-      end: "+=100%",
-      scrub: 1, // Reduced scrub value for smoother scrolling
-      stagger: 0.5,
-      // markers: true,
-      // pinSpacing: false, // Ensure the section stays pinned until the animation ends
+      end: "+=800%", // افزایش مقدار برای نگه داشتن بیشتر در این سکشن
+      scrub: 1, // همگام‌سازی بهتر اسکرول و انیمیشن
+      pinSpacing: true, // جلوگیری از نمایش زودهنگام سکشن بعدی
+      anticipatePin: 1, // بهینه‌سازی حرکت پین‌شدن
     },
     defaults: {
-      duration: 1, // Reduced duration for smoother animations
-      ease: "slow(1,1,false)", // Changed ease for smoother effect
+      duration: 2,
+      ease: "power3.out", // بهبود روان بودن حرکت
     },
   });
+
   SectionThree
-    .to(".to-right", {
-      x: 0,
-    })
-    .to(".to-left", {
-      x: 0,
-    })
-    .to(".to-right-2", {
-      x: 0,
-    })
-    .to(".to-left-2", {
-      x: 0,
-    })
-    .to(".to-right-3", {
-      x: 0,
-    })
-    .to(".to-left-3", {
-      x: 0,
-    });
+    .to(".to-right", { x: 0 }, "-=1.3")
+    .to(".to-left", { x: 0 }, "-=1")
+    .to(".to-right-2", { x: 0 }, "-=1.2")
+    .to(".to-left-2", { x: 0 }, "-=1.5")
+    .to(".to-right-3", { x: 0 }, "-=1.4")
+    .to(".to-left-3", { x: 0 }, "-=2");
+
 });
+
 
 let ResponsiveSectionFour = gsap.matchMedia();
 ResponsiveSectionFour.add("(min-width: 769px)", () => {
@@ -184,22 +174,162 @@ ResponsiveSectionFour.add("(min-width: 769px)", () => {
     scrollTrigger: {
       trigger: ".Fourth-section",
       pin: true,
+      pinSpacing: true, // جلوگیری از نمایش زودهنگام سکشن بعدی
+      anticipatePin: 1, // بهینه‌سازی حرکت پین‌شدن
       start: "top top",
-      end: "+=100%",
+      end: "+=800%",
       scrub: 1,
-      stagger: 0.5,
       // markers: true,
     },
     defaults: {
-      duration: 1,
+      duration: 2,
       ease: "power1.out",
     },
   });
   SectionFour
     .to(".advantage-section", {
       x: 0,
-    });
+    }, "-=1.3");
 });
+
+// const BlogCard = document.querySelector(".Blog-card");
+let ResponsiveSectionFive = gsap.matchMedia();
+ResponsiveSectionFive.add("(min-width : 769px)", () => {
+  const SectionFive = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".Fifth-section",
+      pin: true,
+      pinSpacing: true, // جلوگیری از نمایش زودهنگام سکشن بعدی
+      anticipatePin: 1, // بهینه‌سازی حرکت پین‌شدن
+      start: "top top", // Start the animation when the top of the element is 80% from the top of the viewport
+      end: "+=250%", // End the animation when the bottom of the element reaches the top of the viewport
+      scrub: 1, // Smooth scrubbing
+    },
+    defaults: {
+      duration: 2,
+      ease: "power1.out",
+    }
+  });
+  SectionFive.from(".Blog-card", {
+    y: -50,
+    opacity: 0,
+    stagger: 0.5,
+  });
+});
+
+
+// نمایش خدمات به صورت استیکی
+// gsap.registerPlugin(ScrollTrigger);
+
+// // انیمیشن تصاویر
+// gsap.utils.toArray('.services-card-img').forEach((image, index) => {
+//   gsap.from(image, {
+//     opacity: 0,
+//     x: 100, // حرکت به سمت راست
+//     scrollTrigger: {
+//       trigger: image,
+//       start: "top 75%", // وقتی بالای تصویر به 75% از صفحه رسید
+//       end: "bottom top", // وقتی پایین تصویر به بالای صفحه رسید
+//       scrub: 1, // اسکرول به آرامی انیمیشن را به جلو و عقب می‌برد
+//       toggleActions: "play none none none"
+//     }
+//   });
+// });
+
+// // انیمیشن متن‌ها
+// gsap.utils.toArray('.services-card-body').forEach((textBlock, index) => {
+//   gsap.from(textBlock, {
+//     opacity: 0,
+//     y: 50, // حرکت از پایین
+//     scrollTrigger: {
+//       trigger: textBlock,
+//       start: "top 80%", // شروع انیمیشن وقتی که بالا به 80% صفحه رسید
+//       end: "bottom top",
+//       scrub: 1, // اسکرول باعث حرکت انیمیشن می‌شود
+//       toggleActions: "play none none none"
+//     }
+//   });
+// });
+// نمایش خدمات به صورت استیکی
+
+
+// gsap.registerPlugin(ScrollTrigger);
+
+// const images = document.querySelectorAll(".image");
+// const texts = document.querySelectorAll(".text-block");
+// const stickySection = document.querySelector(".sticky-section");
+
+// // ایجاد تایم‌لاین برای پین کردن بخش
+// gsap.timeline({
+//   scrollTrigger: {
+//     trigger: stickySection,
+//     start: "top top",
+//     end: "bottom bottom",
+//     pin: true,
+//     scrub: true,
+//   },
+//   defaults: {
+//     duration: 1,
+//     ease: "power1.out",
+//   },
+// });
+
+// // برای هر متن و تصویر که باید فعال بشه
+// texts.forEach((text, index) => {
+//   ScrollTrigger.create({
+//     trigger: stickySection,
+//     start: `top+=${index * 100} bottom`, // تغییر برای هر تصویر به صورت جداگانه
+//     end: `top+=${(index + 1) * 100} bottom`,
+//     onEnter: () => {
+//       // حذف کلاس‌های فعال از تمام تصاویر و متن‌ها
+//       images.forEach(img => img.classList.remove("active"));
+//       texts.forEach(txt => txt.classList.remove("active"));
+
+//       // افزودن کلاس فعال به تصویر و متن فعلی
+//       images[index].classList.add("active");
+//       text.classList.add("active");
+//     },
+//     onEnterBack: () => {
+//       // انجام عملیات مشابه در هنگام برگشت به عقب
+//       images.forEach(img => img.classList.remove("active"));
+//       texts.forEach(txt => txt.classList.remove("active"));
+
+//       images[index].classList.add("active");
+//       text.classList.add("active");
+//     }
+//   });
+// });
+
+
+// ScrollTrigger.create({
+//   trigger: stickySection,
+//   start: "top top",
+//   end: "bottom bottom",
+//   pin: true,
+//   scrub: true,
+// });
+
+// texts.forEach((text, index) => {
+//   ScrollTrigger.create({
+//     trigger: stickySection,
+//     start: "top top",
+//     end: "bottom bottom",
+//     onEnter: () => {
+//       images.forEach(img => img.classList.remove("active"));
+//       texts.forEach(txt => txt.classList.remove("active"));
+
+//       images[index].classList.add("active");
+//       text.classList.add("active");
+//     },
+//     onEnterBack: () => {
+//       images.forEach(img => img.classList.remove("active"));
+//       texts.forEach(txt => txt.classList.remove("active"));
+
+//       images[index].classList.add("active");
+//       text.classList.add("active");
+//     }
+//   });
+// });
 
 // دریافت تمامی چایلد ها به صورت یکچا با عث کاهش میزان کد می شود
 // document.querySelectorAll(".Second-section .child").forEach((child, index) => {
