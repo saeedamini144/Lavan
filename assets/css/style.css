@@ -996,7 +996,7 @@ header {
 .to-left-2,
 .to-left-3 {
   transform: translate(100vw);
-  transition: transform 0.4s ease
+  transition: transform 1.5s ease
 }
 
 
@@ -1004,7 +1004,7 @@ header {
 .to-right-2,
 .to-right-3 {
   transform: translateX(-100vw);
-  transition: transform 0.4s ease
+  transition: transform 1.5s ease
 }
 
 
@@ -1026,12 +1026,14 @@ header {
   .to-left-2,
   .to-left-3 {
     transform: translateX(0);
+    transition: 2;
   }
 
   .to-right,
   .to-right-2,
   .to-right-3 {
     transform: translateX(0);
+    transition: 1.5s;
   }
 }
 
@@ -1361,3 +1363,76 @@ footer h3 {
 }
 
 /* footer section end */
+
+
+/* .sticky-section {
+  position: relative;
+}
+
+.image-section {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.image-section img {
+  position: absolute;
+  width: auto;
+  height: auto;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.image-section img.active {
+  opacity: 1;
+}
+
+.content-section {
+  width: 50%;
+  position: relative;
+  padding: 50px 0;
+}
+
+.text-block {
+  font-size: 24px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+.text-block.active {
+  opacity: 1;
+  transform: translateY(0);
+} */
+.second-1-section-card {
+  display: flex;
+  flex-direction: row;
+}
+
+.image-section {
+  width: 50%;
+  position: relative;
+}
+
+.image-section img {
+  position: absolute;
+  width: auto;
+  height: auto;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.content-section {
+  width: 50%;
+  position: relative;
+}
+
+.content-section .text-block {
+  position: absolute;
+  width: auto;
+  height: auto;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
