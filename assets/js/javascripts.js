@@ -192,7 +192,7 @@ ResponsiveSectionFive.add("(min-width : 769px)", () => {
       anticipatePin: 1, // بهینه‌سازی حرکت پین‌شدن
       start: "top top", // Start the animation when the top of the element is 80% from the top of the viewport
       end: "+=250%", // End the animation when the bottom of the element reaches the top of the viewport
-      scrub: 1, // Smooth scrubbing
+      scrub: 0.5, // Smooth scrubbing
     },
     defaults: {
       duration: 2,
