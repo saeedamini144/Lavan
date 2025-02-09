@@ -87,6 +87,7 @@ if (typeof gsap !== 'undefined') {
 let ResponsiveSectionOne = gsap.matchMedia();
 
 ResponsiveSectionOne.add("(min-width: 769px)", () => {
+
   const SectionOne = gsap.timeline({
     scrollTrigger: {
       trigger: ".First-section",
@@ -95,7 +96,7 @@ ResponsiveSectionOne.add("(min-width: 769px)", () => {
       start: "top top", // شروع پین از ابتدای سکشن
       end: "+=100%", // مدت زمان پین (به درصد ارتفاع سکشن)
       scrub: 1.5, // حرکت نرم با اسکرول
-      stagger: 0.5,
+      // stagger: 0.5,
       // markers: true, // نمایش مارکر برای تست
     },
     defaults: {
@@ -109,34 +110,22 @@ ResponsiveSectionOne.add("(min-width: 769px)", () => {
     //   paddingTop:200,
     // })
     .to(".card:nth-child(1)", {
-      x: 0, // جابجایی در محور X
-      y: 0,
-      margin: 5,
-      scale: 1, // تغییر اندازه
-    })
+      xPercent: 10, // جابجایی در محور X
+    }, "-=1")
 
     // انیمیشن برای کارت دوم
     .to(".card:nth-child(2)", {
-      x: 0,
-      y: 0,
-      margin: 5,
-      scale: 1, // تغییر اندازه    
-    })
+      xPercent: 8,
+    }, "-=1")
 
     // انیمیشن برای کارت چهارم (در مرکز قرار بگیرد)
     .to(".card:nth-child(4)", {
-      x: 0,
-      y: 0,
-      margin: 5,
-      scale: 1, // تغییر اندازه 
-    })
+      xPercent: -8,
+    }, "-=1")
     // انیمیشن برای کارت پنجم (در مرکز قرار بگیرد)
     .to(".card:nth-child(5)", {
-      x: 0,
-      y: 0,
-      margin: 5,
-      scale: 1, // تغییر اندازه 
-    });
+      xPercent: -10,
+    }, "-=1");
 });
 
 let ResponsiveSectionThree = gsap.matchMedia();

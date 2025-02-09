@@ -652,7 +652,7 @@ header {
   border: none;
   border-radius: 28px !important;
   overflow: hidden;
-  width: 408px;
+  width: 379px;
   /* Default card width */
   height: 408px;
   background-color: white;
@@ -661,12 +661,12 @@ header {
 }
 
 .card:nth-child(1) {
-  transform: translateX(-75%) translateY(25px) scale(0.65);
+  transform: translateX(-130%) translateY(25px) scale(0.65);
   z-index: 1;
 }
 
 .card:nth-child(2) {
-  transform: translateX(-25%) translateY(25px) scale(0.75);
+  transform: translateX(-55%) translateY(25px) scale(0.75);
   z-index: 2;
 }
 
@@ -676,12 +676,12 @@ header {
 }
 
 .card:nth-child(4) {
-  transform: translateX(25%) translateY(25px) scale(0.75);
+  transform: translateX(55%) translateY(25px) scale(0.75);
   z-index: 2;
 }
 
 .card:nth-child(5) {
-  transform: translateX(75%) translateY(25px) scale(0.65);
+  transform: translateX(130%) translateY(25px) scale(0.65);
   z-index: 1;
 }
 
