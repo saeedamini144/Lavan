@@ -128,6 +128,24 @@ ResponsiveSectionOne.add("(min-width: 769px)", () => {
     }, "-=1");
 });
 
+document.querySelectorAll(".details").forEach((detail, index) => {
+  ScrollTrigger.create({
+    trigger: detail,
+    start: "top center",
+    end: "bottom center",
+    onEnter: () => changeContent(index, detail.dataset.bg),
+    onEnterBack: () => changeContent(index, detail.dataset.bg),
+    scrub: true
+  });
+});
+
+function changeContent(index, bgColor) {
+  gsap.to(".photo", { opacity: 0, scale: 0.5, duration: 0.5 });
+  gsap.to(`.photo[data-index='${index}']`, { opacity: 1, scale: 1, duration: 0.5 });
+  gsap.to(".second-section-prototype", { backgroundColor: bgColor, duration: 1, ease: "power2.inOut" });
+}
+
+
 let ResponsiveSectionThree = gsap.matchMedia();
 ResponsiveSectionThree.add("(min-width: 769px)", () => {
   const SectionThree = gsap.timeline({

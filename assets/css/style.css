@@ -843,7 +843,7 @@ header {
 .services-card-title {
   font-family: "PeydaBold";
   font-size: 32px;
-  line-height: 2rem;
+  line-height: 1.8em;
 }
 
 .services-card-text {
@@ -1363,73 +1363,62 @@ footer h3 {
 }
 
 /* footer section end */
-
-
-/* .sticky-section {
-  position: relative;
-}
-
-.image-section {
-  width: 50%;
+.gallery {
   display: flex;
-  align-items: center;
-  justify-content: center;
   position: relative;
 }
 
-.image-section img {
-  position: absolute;
-  width: auto;
-  height: auto;
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
-}
-
-.image-section img.active {
-  opacity: 1;
-}
-
-.content-section {
+/* .left {
   width: 50%;
-  position: relative;
-  padding: 50px 0;
-}
-
-.text-block {
-  font-size: 24px;
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.5s, transform 0.5s;
-}
-
-.text-block.active {
-  opacity: 1;
-  transform: translateY(0);
 } */
-/* .second-1-section-card {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-}
 
-.image-section,
-.content-section {
-  width: 50%;
-  position: relative;
-}
-
-.image-section img,
-.content-section .text-block {
+.detailsWrapper {
+  margin: auto;
   width: 100%;
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  margin-right: 50px;
 }
 
-.image-section img.active,
-.content-section .text-block.active {
-  opacity: 1;
-  transform: translateY(0);
-} */
+.details {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.right {
+  /* width: 50%; */
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  top: 0;
+}
+
+.photos {
+  width: 30vw;
+  height: 40vh;
+  position: relative;
+}
+
+.photo {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 20px;
+  opacity: 0;
+  transform: scale(0.5);
+}
+
+.service-body .service-title {
+  font-family: "PeydaBold";
+  font-size: 40px;
+}
+
+.service-body .service-text {
+  font-family: "PeydaLight";
+  font-size: 24px;
+  padding-top: 10px;
+}
