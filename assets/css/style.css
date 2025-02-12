@@ -921,6 +921,12 @@ header {
     padding: 100px 20px 100px 20px;
   }
 
+  .detailsWrapper {
+    margin: auto;
+    width: 90%;
+    margin-right: 50px;
+  }
+
   .services {
     align-items: center;
     margin-bottom: 32px;
