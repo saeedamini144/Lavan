@@ -22,7 +22,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 /* تنظیمات عمومی برای  موبایل */
 
 /* @media (max-width: 480px) {
-  
+
 } */
 html.lenis,
 html.lenis body {
@@ -59,16 +59,15 @@ html {
 }
 
 /* .container {
-    width: 1272px;
-    margin: 0 auto;
+  width: 1272px;
+  margin: 0 auto;
 } */
-/* body{
-  background: linear-gradient(
-    107deg,
-    rgba(223, 213, 255, 1) 5%,
-    rgba(255, 255, 255, 1) 23%
-  );
-} */
+body {
+  background: linear-gradient(107deg,
+      rgba(223, 213, 255, 1) 1%,
+      rgba(255, 255, 255, 1) 9%);
+}
+
 @font-face {
   font-family: "PeydaLight";
   src: url(/assets/fonts/peydaWeb-light.woff) format("woff");
@@ -139,6 +138,8 @@ textPath {
   --light-purple2: #f5f1ff;
   --gray2: #575757;
   --text: #464257;
+  --ultra-light-purple: #F8F6FF;
+  --Lavan-purple: #5A2873;
 }
 
 input {
@@ -202,12 +203,24 @@ a button:hover svg {
   fill: var(--whiteColor);
 }
 
+.content-padding {
+  padding: 0 82px;
+}
+
 /* تنظیمات عمومی برای از موبایل تا تبلت */
-@media (max-width: 768px) {}
+@media (max-width: 768px) {
+  .content-padding {
+    padding: 0 32px;
+  }
+}
 
 /* تنظیمات عمومی برای  موبایل */
 
-@media (max-width: 480px) {}
+@media (max-width: 480px) {
+  .content-padding {
+    padding: 0 16px;
+  }
+}
 
 /* button style end */
 
@@ -228,11 +241,11 @@ a button:hover svg {
   z-index: 1000;
 }
 
-header {
-  background: linear-gradient(107deg,
-      rgba(223, 213, 255, 1) 5%,
-      rgba(255, 255, 255, 1) 23%);
-}
+/* header {
+background: linear-gradient(107deg,
+    rgba(223, 213, 255, 1) 5%,
+    rgba(255, 255, 255, 1) 23%);
+} */
 
 /* عمومی */
 .navmenu {
@@ -331,9 +344,9 @@ header {
     vertical-align: middle;
   }
 
-  header {
-    background: linear-gradient(107deg, rgba(223, 213, 255, 1) 11%, rgba(255, 255, 255, 1) 40%);
-  }
+  /* header {
+  background: linear-gradient(107deg, rgba(223, 213, 255, 1) 11%, rgba(255, 255, 255, 1) 40%);
+} */
 }
 
 /* تنظیمات عمومی برای دسکتاپ */
@@ -517,9 +530,9 @@ header {
   width: 100%;
   height: 100vh;
   /* background: rgb(223, 213, 255); */
-  background: linear-gradient(107deg,
-      rgba(223, 213, 255, 1) 5%,
-      rgba(255, 255, 255, 1) 23%);
+  /* background: linear-gradient(107deg,
+    rgba(223, 213, 255, 1) 5%,
+    rgba(255, 255, 255, 1) 23%); */
 }
 
 .First-section-content {
@@ -604,8 +617,8 @@ header {
 @media (min-width: 769px) {
 
   /* .First-section{
-    width: 50%;
-  } */
+  width: 50%;
+} */
   .First-section-content h1 {
     font-size: 28px;
   }
@@ -798,7 +811,7 @@ header {
 }
 
 /* .left {
-  width: 50%;
+width: 50%;
 } */
 
 .detailsWrapper {
@@ -882,34 +895,34 @@ header {
 
 /* section2 blog car start */
 /* .services-card {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-  gap: 20px;
+display: flex;
+flex-direction: row;
+justify-content: space-evenly;
+align-items: center;
+gap: 20px;
 }
 
 .services-card-img {
-  width: 516px;
-  height: 320px;
-  border-radius: 12px;
+width: 516px;
+height: 320px;
+border-radius: 12px;
 }
 
 .services-card-body {
-  width: 40%;
-  height: auto;
+width: 40%;
+height: auto;
 }
 
 .services-card-title {
-  font-family: "PeydaBold";
-  font-size: 32px;
-  line-height: 1.8em;
+font-family: "PeydaBold";
+font-size: 32px;
+line-height: 1.8em;
 }
 
 .services-card-text {
-  font-size: 20px;
-  line-height: 1.9rem;
-  font-family: "PeydaLight";
+font-size: 20px;
+line-height: 1.9rem;
+font-family: "PeydaLight";
 } */
 
 /* تنظیمات عمومی برای از موبایل تا تبلت */
@@ -944,50 +957,50 @@ header {
   }
 
   /* .second-section {
-    width: 100%;
-    padding: 80px 20px 20px 20px;
-  }
+  width: 100%;
+  padding: 80px 20px 20px 20px;
+}
 
-  .second-section-card {
-    display: flex;
-    gap: 0;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
+.second-section-card {
+  display: flex;
+  gap: 0;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
 
-  .services-card {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
-    gap: 20px;
-    width: 50%;
-  }
+.services-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 20px;
+  width: 50%;
+}
 
-  .services-card-img {
-    width: 328px;
-    height: 202px;
-    border-radius: 12px;
-  }
+.services-card-img {
+  width: 328px;
+  height: 202px;
+  border-radius: 12px;
+}
 
-  .services-card-body {
-    width: 100%;
-    height: auto;
-    margin: 20px;
-  }
+.services-card-body {
+  width: 100%;
+  height: auto;
+  margin: 20px;
+}
 
-  .services-card-title {
-    font-family: "PeydaBold";
-    font-size: 24px;
-    line-height: 2rem;
-  }
+.services-card-title {
+  font-family: "PeydaBold";
+  font-size: 24px;
+  line-height: 2rem;
+}
 
-  .services-card-text {
-    font-size: 14px;
-    line-height: 1.9rem;
-    font-family: "PeydaLight";
-  } */
+.services-card-text {
+  font-size: 14px;
+  line-height: 1.9rem;
+  font-family: "PeydaLight";
+} */
 }
 
 /* تنظیمات عمومی برای  موبایل */
@@ -1033,24 +1046,24 @@ header {
   }
 
   /* .second-section {
-    width: 100%;
-    padding: 80px 20px 20px 20px;
-  }
+  width: 100%;
+  padding: 80px 20px 20px 20px;
+}
 
-  .services-card {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
-    gap: 20px;
-    width: 100%;
-  }
+.services-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
 
-  .services-card-img {
-    width: 328px;
-    height: 192px;
-    border-radius: 12px;
-  } */
+.services-card-img {
+  width: 328px;
+  height: 192px;
+  border-radius: 12px;
+} */
 
 }
 
@@ -1159,7 +1172,7 @@ header {
 /* تنظیمات عمومی برای  موبایل */
 
 /* @media (max-width: 480px) {
-  
+
 } */
 
 /* third section end */
@@ -1361,7 +1374,7 @@ header {
 }
 
 /* .Blog-card-meta {
-  padding-top: 16px;
+padding-top: 16px;
 } */
 
 .Blog-card-meta span {
@@ -1482,3 +1495,66 @@ footer h3 {
 }
 
 /* footer section end */
+
+
+
+/* page template style */
+
+.page-first-section {
+  background: linear-gradient(113deg,
+      rgba(000, 000, 000, 50%) 0%,
+      rgba(000, 000, 000, 100%) 19%,
+      rgba(000, 000, 000, 100%) 59%,
+      rgba(000, 000, 000, 80%) 75%,
+      rgba(000, 000, 000, 100%) 100%);
+  height: auto;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+
+
+.banner-page {
+  opacity: 0.3;
+  mix-blend-mode: luminosity;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 472px;
+  height: 472px;
+  margin: auto;
+}
+
+.banner-page img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+
+.Main-title h1 {
+  font-family: "PeydaBold";
+  line-height: 1.9rem;
+  color: var(--whiteColor);
+  opacity: 100%;
+  margin-top: 50px;
+}
+
+.Main-title h1 {
+  font-size: 65px;
+}
+
+.English-main-title {
+  font-family: "PeydaBold";
+  line-height: 1.9rem;
+  color: var(--text);
+  opacity: 100%;
+  text-align: end;
+}
+
+
+.English-main-title h2 {
+  font-size: 82px;
+}
+
+/* page template style */
