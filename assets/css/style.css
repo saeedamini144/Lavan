@@ -166,6 +166,7 @@ p {
   font-size: 16px;
   font-weight: 400;
   line-height: 26px;
+  text-align: justify;
 }
 
 ul {
@@ -1556,5 +1557,66 @@ footer h3 {
 .English-main-title h2 {
   font-size: 82px;
 }
+
+.content-section {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.breadcrumb ul li {
+  display: inline;
+  font-family: "PeydaLight";
+  font-size: 18px;
+}
+
+.breadcrumb ul li a {
+  color: var(--text);
+}
+
+.content-title {
+  font-family: "PeydaBold";
+  font-size: 28px;
+  color: var(--text);
+}
+
+.content-title img {
+  width: 55px;
+  height: auto;
+  margin: 0 20px;
+}
+
+.page-content p {
+  font-size: 20px;
+  font-family: "PeydaLight";
+  line-height: 3rem;
+}
+
+.content-grid-gallery {
+  display: grid;
+  gap: 0;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, auto);
+}
+
+/* تنظیمات عمومی برای از موبایل تا تبلت */
+@media (max-width: 768px) {
+  .content-grid-gallery {
+    display: grid;
+    gap: 0;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+  }
+}
+
+/* تنظیمات عمومی برای  موبایل */
+
+/* @media (max-width: 480px) {
+  .content-grid-gallery {
+    display: grid;
+    gap: 0;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+  }
+} */
 
 /* page template style */
