@@ -1620,3 +1620,129 @@ footer h3 {
 } */
 
 /* page template style */
+
+/* faq style */
+/* Style for the main FAQ container */
+.faq-container {
+  max-width: 100%;
+  /* Limit the width for better readability */
+  margin: 50px auto;
+  /* Center the container and add vertical spacing */
+  padding: 20px;
+  font-family: "PeydaMedium";
+  color: var(--dark-background);
+  /* Base text color */
+}
+
+
+/* Style for each FAQ item */
+.faq-item {
+  border-bottom: 1px solid var(--blackColor);
+  /* Light gray border between items */
+  border-radius: 12px;
+  overflow: hidden;
+  font-family: "PeydaMedium";
+  margin: 10px 0;
+  /* Hide overflowing content */
+}
+
+/* Style for the question buttons */
+.faq-question {
+  background-color: var(--blackColor);
+  color: var(--whiteColor);
+  font-family: "PeydaMedium";
+  /* Light gray background */
+  width: 100%;
+  padding: 20px;
+  text-align: start;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.3s ease;
+  /* Smooth background transition on hover */
+}
+
+/* Hover effect for question buttons */
+.faq-question:hover {
+  background-color: var(--dark-background);
+  color: var(--gray);
+  /* Slightly darker gray on hover */
+}
+
+/* Style for the arrow icon */
+.faq-question .arrow {
+  position: absolute;
+  left: 20px;
+  transition: transform 0.3s ease;
+  /* Smooth rotation transition */
+}
+
+/* Rotate the arrow when the question is active (expanded) */
+.faq-question.active .arrow {
+  transform: rotate(180deg);
+  /* Rotate arrow 180 degrees */
+}
+
+/* Style for the answer sections */
+.faq-answer {
+  max-height: 0;
+  /* Initially hide the answer */
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  /* Smooth transition for expanding */
+  background-color: var(--blackColor);
+  color: var(--whiteColor);
+  font-family: "PeydaMedium";
+  /* White background for answers */
+}
+
+/* Style for the answer text */
+.faq-answer p {
+  padding: 20px;
+  font-size: 16px;
+  line-height: 1.5;
+  /* Increase line height for better readability */
+  color: var(--whiteColor);
+  font-family: "PeydaMedium";
+  /* Slightly lighter text color for answers */
+}
+
+/* تنظیمات عمومی برای از موبایل تا تبلت */
+@media (max-width: 768px) {
+  .faq-answer p {
+    padding: 18px;
+    font-size: 14px;
+    line-height: 1.5;
+    /* Increase line height for better readability */
+    color: var(--whiteColor);
+    font-family: "PeydaMedium";
+    /* Slightly lighter text color for answers */
+  }
+
+  .faq-question {
+    background-color: var(--blackColor);
+    color: var(--whiteColor);
+    font-family: "PeydaMedium";
+    /* Light gray background */
+    width: 100%;
+    padding: 20px;
+    text-align: start;
+    font-size: 14px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.3s ease;
+    /* Smooth background transition on hover */
+  }
+}
+
+/* تنظیمات عمومی برای  موبایل */
+
+/* @media (max-width: 480px) {
+
+} */
+
+/* faq style */
