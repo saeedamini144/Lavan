@@ -205,12 +205,12 @@ ResponsiveSectionFive.add("(min-width : 769px)", () => {
   const SectionFive = gsap.timeline({
     scrollTrigger: {
       trigger: ".Fifth-section",
-      pin: true,
-      pinSpacing: true, // جلوگیری از نمایش زودهنگام سکشن بعدی
+      // pin: true,
+      // pinSpacing: true, // جلوگیری از نمایش زودهنگام سکشن بعدی
       anticipatePin: 1, // بهینه‌سازی حرکت پین‌شدن
       start: "top top", // Start the animation when the top of the element is 80% from the top of the viewport
-      end: "+=250%", // End the animation when the bottom of the element reaches the top of the viewport
-      scrub: 0.5, // Smooth scrubbing
+      end: "bottom bottom", // End the animation when the bottom of the element reaches the top of the viewport
+      // scrub: 0.5, // Smooth scrubbing
     },
     defaults: {
       duration: 2,
