@@ -832,11 +832,12 @@ width: 50%;
   /* width: 50%; */
   height: 100vh;
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   justify-content: center;
   align-items: center;
   position: sticky;
   top: 0;
+  gap: 100px;
 }
 
 .photos {
@@ -852,7 +853,7 @@ width: 50%;
   object-fit: cover;
   border-radius: 20px;
   opacity: 0;
-  transform: scale(0.5);
+  /* transform: scale(0.5); */
 }
 
 .service-body .service-title {
@@ -870,10 +871,6 @@ width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  position: sticky;
-  top: 50%;
-  bottom: 20%;
-
 }
 
 .services h2 {
@@ -944,6 +941,7 @@ font-family: "PeydaLight";
   .services {
     align-items: center;
     margin-bottom: 32px;
+    display: none;
   }
 
   .service-body .service-title {
@@ -955,6 +953,18 @@ font-family: "PeydaLight";
     font-family: "PeydaLight";
     font-size: 16px;
     padding-top: 10px;
+  }
+
+  .right {
+    /* width: 50%; */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    /* gap: 100px; */
   }
 
   /* .second-section {
@@ -1074,7 +1084,7 @@ font-family: "PeydaLight";
 
 .Third-section {
   width: 100%;
-  height: 100vh;
+  height: auto;
   background-color: var(--dark-background);
   padding: 84px;
   margin: auto;

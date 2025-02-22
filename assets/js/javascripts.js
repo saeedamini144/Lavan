@@ -127,23 +127,32 @@ ResponsiveSectionOne.add("(min-width: 769px)", () => {
       xPercent: -10,
     }, "-=1");
 });
-
+// second section prototype
 document.querySelectorAll(".details").forEach((detail, index) => {
   ScrollTrigger.create({
     trigger: detail,
     start: "top center",
     end: "bottom center",
-    onEnter: () => changeContent(index, detail.dataset.bg),
-    onEnterBack: () => changeContent(index, detail.dataset.bg),
+    onEnter: () => changeContent(index, detail.dataset.bg, "enter"),
+    onEnterBack: () => changeContent(index, detail.dataset.bg, "back"),
     scrub: true
   });
 });
 
-function changeContent(index, bgColor) {
-  gsap.to(".photo", { opacity: 0, scale: 0.5, duration: 0.5 });
-  gsap.to(`.photo[data-index='${index}']`, { opacity: 1, scale: 1, duration: 0.5 });
-  gsap.to(".second-section-prototype", { backgroundColor: bgColor, duration: 1, ease: "power2.inOut" });
+function changeContent(index, bgColor, direction) {
+  let yValue = direction === "enter" ? "100% " : "-100% "; // جهت ورود و خروج اسلاید
+  let prevYValue = direction === "enter" ? " " : " ";
+
+  gsap.to(".photo", { x: prevYValue, opacity: 0, duration: 0.5 });
+  gsap.fromTo(`.photo[data-index='${index}']`,
+    { y: yValue, opacity: 0, },
+    { y: "0%", opacity: 1, duration: 0.5 }
+  );
+
+  gsap.to(".second-section-prototype", { backgroundColor: bgColor, duration: 1, ease: "expoScale(0.5,7,none)" });
 }
+
+// second section prototype
 
 
 let ResponsiveSectionThree = gsap.matchMedia();
@@ -151,26 +160,27 @@ ResponsiveSectionThree.add("(min-width: 769px)", () => {
   const SectionThree = gsap.timeline({
     scrollTrigger: {
       trigger: ".Third-section",
-      pin: true,
-      start: "top top",
-      end: "+=800%", // افزایش مقدار برای نگه داشتن بیشتر در این سکشن
-      scrub: 1, // همگام‌سازی بهتر اسکرول و انیمیشن
+      // pin: true,
+      start: "top 80%",
+      end: "bottom center", // افزایش مقدار برای نگه داشتن بیشتر در این سکشن
+      // scrub: 1, // همگام‌سازی بهتر اسکرول و انیمیشن
       pinSpacing: true, // جلوگیری از نمایش زودهنگام سکشن بعدی
-      anticipatePin: 1, // بهینه‌سازی حرکت پین‌شدن
+      // anticipatePin: 1, // بهینه‌سازی حرکت پین‌شدن
+      markers: true,
     },
     defaults: {
-      duration: 2,
+      duration: 0.5,
       ease: "power3.out", // بهبود روان بودن حرکت
     },
   });
 
   SectionThree
-    .to(".to-right", { x: 0 }, "-=1.3")
-    .to(".to-left", { x: 0 }, "-=1")
-    .to(".to-right-2", { x: 0 }, "-=1.2")
-    .to(".to-left-2", { x: 0 }, "-=1.5")
-    .to(".to-right-3", { x: 0 }, "-=1.4")
-    .to(".to-left-3", { x: 0 }, "-=2");
+    .to(".to-right", { x: 0 },)
+    .to(".to-left", { x: 0 },)
+    .to(".to-right-2", { x: 0 },)
+    .to(".to-left-2", { x: 0 },)
+    .to(".to-right-3", { x: 0 },)
+    .to(".to-left-3", { x: 0 },);
 
 });
 
@@ -189,7 +199,7 @@ ResponsiveSectionFour.add("(min-width: 769px)", () => {
       // markers: true,
     },
     defaults: {
-      duration: 2,
+      duration: 1,
       ease: "power1.out",
     },
   });
@@ -213,7 +223,7 @@ ResponsiveSectionFive.add("(min-width : 769px)", () => {
       // scrub: 0.5, // Smooth scrubbing
     },
     defaults: {
-      duration: 2,
+      duration: 0.5,
       ease: "power1.out",
     }
   });
