@@ -95,7 +95,7 @@ ResponsiveSectionOne.add("(min-width: 769px)", () => {
       // pin: ".main-card-scroll", // پین کردن سکشن کارت‌ها
       start: "top top", // شروع پین از ابتدای سکشن
       end: "+=100%", // مدت زمان پین (به درصد ارتفاع سکشن)
-      scrub: 1.5, // حرکت نرم با اسکرول
+      scrub: true, // حرکت نرم با اسکرول
       // stagger: 0.5,
       // markers: true, // نمایش مارکر برای تست
     },
@@ -110,23 +110,25 @@ ResponsiveSectionOne.add("(min-width: 769px)", () => {
     //   paddingTop:200,
     // })
     .to(".card:nth-child(1)", {
-      xPercent: 10, // جابجایی در محور X
+      xPercent: 35, // جابجایی در محور X
     }, "-=1")
 
     // انیمیشن برای کارت دوم
     .to(".card:nth-child(2)", {
-      xPercent: 8,
+      xPercent: 20,
     }, "-=1")
 
     // انیمیشن برای کارت چهارم (در مرکز قرار بگیرد)
     .to(".card:nth-child(4)", {
-      xPercent: -8,
+      xPercent: -20,
     }, "-=1")
     // انیمیشن برای کارت پنجم (در مرکز قرار بگیرد)
     .to(".card:nth-child(5)", {
-      xPercent: -10,
+      xPercent: -35,
     }, "-=1");
 });
+
+
 // second section prototype
 document.querySelectorAll(".details").forEach((detail, index) => {
   ScrollTrigger.create({
@@ -143,71 +145,74 @@ function changeContent(index, bgColor, direction) {
   let yValue = direction === "enter" ? "100% " : "-100% "; // جهت ورود و خروج اسلاید
   let prevYValue = direction === "enter" ? " " : " ";
 
-  gsap.to(".photo", { x: prevYValue, opacity: 0, duration: 0.5 });
+  gsap.to(".photo", { x: prevYValue, zIndex: 0, opacity: 0.5, duration: 0.5 });
   gsap.fromTo(`.photo[data-index='${index}']`,
-    { y: yValue, opacity: 0, },
-    { y: "0%", opacity: 1, duration: 0.5 }
+    { y: yValue, zIndex: 0, opacity: 0.5 },
+    { y: "0%", zIndex: 1, opacity: 1, duration: 0.5, }
   );
 
   gsap.to(".second-section-prototype", { backgroundColor: bgColor, duration: 1, ease: "expoScale(0.5,7,none)" });
 }
 
-// second section prototype
-
+// second section prototype end
 
 let ResponsiveSectionThree = gsap.matchMedia();
 ResponsiveSectionThree.add("(min-width: 769px)", () => {
-  const SectionThree = gsap.timeline({
-    scrollTrigger: {
-      trigger: ".Third-section",
-      // pin: true,
-      start: "top 80%",
-      end: "bottom center", // افزایش مقدار برای نگه داشتن بیشتر در این سکشن
-      // scrub: 1, // همگام‌سازی بهتر اسکرول و انیمیشن
-      pinSpacing: true, // جلوگیری از نمایش زودهنگام سکشن بعدی
-      // anticipatePin: 1, // بهینه‌سازی حرکت پین‌شدن
-      markers: true,
-    },
-    defaults: {
-      duration: 0.5,
-      ease: "power3.out", // بهبود روان بودن حرکت
-    },
+  const scrollTriggerConfig = {
+    trigger: ".Third-section",
+    start: "-20% 80%",
+    end: "center center",
+    scrub: true,
+    pinSpacing: true,
+    markers: true,
+  };
+
+  gsap.to(".to-right", {
+    x: 0,
+    scrollTrigger: scrollTriggerConfig,
+    duration: 0.2,
+    ease: "circ.out",
   });
 
-  SectionThree
-    .to(".to-right", { x: 0 },)
-    .to(".to-left", { x: 0 },)
-    .to(".to-right-2", { x: 0 },)
-    .to(".to-left-2", { x: 0 },)
-    .to(".to-right-3", { x: 0 },)
-    .to(".to-left-3", { x: 0 },);
-
+  gsap.to(".to-left", {
+    x: 0,
+    scrollTrigger: scrollTriggerConfig,
+    duration: 0.2,
+    ease: "circ.out",
+  });
 });
 
 
-let ResponsiveSectionFour = gsap.matchMedia();
-ResponsiveSectionFour.add("(min-width: 769px)", () => {
-  const SectionFour = gsap.timeline({
-    scrollTrigger: {
-      trigger: ".Fourth-section",
-      pin: true,
-      pinSpacing: true, // جلوگیری از نمایش زودهنگام سکشن بعدی
-      anticipatePin: 1, // بهینه‌سازی حرکت پین‌شدن
-      start: "top top",
-      end: "+=800%",
-      scrub: 1,
-      // markers: true,
-    },
-    defaults: {
-      duration: 1,
-      ease: "power1.out",
-    },
-  });
-  SectionFour
-    .to(".advantage-section", {
-      x: 0,
-    }, "-=1.3");
-});
+// let ResponsiveSectionFour = gsap.matchMedia();
+// ResponsiveSectionFour.add("(min-width: 769px)", () => {
+//   gsap.to(".advantage-section", {
+//     x: 0,
+//     scrollTrigger: {
+//       trigger: ".Fourth-section",
+//       pin: true,
+//       pinSpacing: true, // جلوگیری از نمایش زودهنگام سکشن بعدی
+//       anticipatePin: 1, // بهینه‌سازی حرکت پین‌شدن
+//       start: "top top",
+//       end: "+=500%",
+//       scrub: 1,
+//       // markers: true,
+//     },
+//     defaults: {
+//       duration: 1,
+//       ease: "circ.out",
+//     },
+//   });
+//   // SectionFour
+//   //   .to(".advantage-section", {
+//   //     x: 0,
+//   //   }, "-=1.3");
+// });
+//section four
+
+
+
+
+//section four end
 
 // const BlogCard = document.querySelector(".Blog-card");
 let ResponsiveSectionFive = gsap.matchMedia();
