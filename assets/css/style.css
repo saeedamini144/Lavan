@@ -1178,6 +1178,14 @@ font-family: "PeydaLight";
     transform: translateX(0);
     transition: 1.5s;
   }
+
+  .item {
+    width: 80px;
+    height: 80px;
+    filter: grayscale(80%);
+    transition: 0.3sease;
+    position: relative;
+  }
 }
 
 /* تنظیمات عمومی برای  موبایل */
@@ -1247,7 +1255,7 @@ font-family: "PeydaLight";
 .advantage-content-title {
   position: absolute;
   right: 0;
-  background-image: linear-gradient(270deg, #fafafa 5%, #ffff 30%);
+  background-image: linear-gradient(270deg, #fafafa 25%, #ffff 65%);
   padding: 5px 5px;
 }
 
@@ -1273,10 +1281,30 @@ font-family: "PeydaLight";
   font-family: "PeydaLight";
 }
 
-.dot {
+.dot-1 {
   position: absolute;
   width: 33px;
   height: 18px;
+  right: 140px;
+  top: 60px;
+}
+
+.dot-2 {
+  position: absolute;
+  width: 33px;
+  height: 18px;
+  left: 40px;
+  bottom: 20px;
+}
+
+.dot-3 {
+  position: absolute;
+  width: 33px;
+  height: 18px;
+  right: 65px;
+  bottom: 20px;
+  transform: rotate(90deg);
+  transform-origin: center;
 }
 
 /* .advantage-section {
