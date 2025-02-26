@@ -66,37 +66,37 @@ body {
   background: linear-gradient(107deg,
       rgba(223, 213, 255, 1) 1%,
       rgba(255, 255, 255, 1) 9%);
-  cursor: url('/assets/pic/Arrow - Down.svg');
+  /* cursor: url(/assets/pic/Arrow-Down.png), auto; */
 }
 
 @font-face {
   font-family: "PeydaLight";
-  src: url(/assets/fonts/peydaWeb-light.woff) format("woff");
+  src: url(https: //saeedamini144.github.io/Lavan/assets/fonts/peydaWeb-light.woff) format("woff");
 }
 
 @font-face {
   font-family: "PeydaMedium";
-  src: url(/assets/fonts/PeydaWeb-Medium.woff) format("woff");
+  src: url(https: //saeedamini144.github.io/Lavan/assets/fonts/PeydaWeb-Medium.woff) format("woff");
 }
 
 @font-face {
   font-family: "PeydaBold";
-  src: url(/assets/fonts/PeydaWeb-Bold.woff) format("woff");
+  src: url(https: //saeedamini144.github.io/Lavan/assets/fonts/PeydaWeb-Bold.woff) format("woff");
 }
 
 @font-face {
   font-family: "DanaRegular";
-  src: url(/assets/fonts/dana-fanum-regular.woff) format("woff");
+  src: url(https: //saeedamini144.github.io/Lavan/assets/fonts/dana-fanum-regular.woff) format("woff");
 }
 
 @font-face {
   font-family: "DanaMedium";
-  src: url(/assets/fonts/dana-fanum-medium.woff) format("woff");
+  src: url(https: //saeedamini144.github.io/Lavan/assets/fonts/dana-fanum-medium.woff) format("woff");
 }
 
 @font-face {
   font-family: "DanaBold";
-  src: url(/assets/fonts/dana-fanum-bold.woff) format("woff");
+  src: url(https: //saeedamini144.github.io/Lavan/assets/fonts/dana-fanum-bold.woff) format("woff");
 }
 
 img {
