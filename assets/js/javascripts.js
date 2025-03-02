@@ -156,6 +156,7 @@ function changeContent(index, bgColor, direction) {
 
 // second section prototype end
 
+//section three start
 let ResponsiveSectionThree = gsap.matchMedia();
 ResponsiveSectionThree.add("(min-width: 769px)", () => {
   const scrollTriggerConfig = {
@@ -181,7 +182,33 @@ ResponsiveSectionThree.add("(min-width: 769px)", () => {
     ease: "circ.out",
   });
 });
+//section three end
 
+let ResponsiveSectionFour = gsap.matchMedia();
+ResponsiveSectionFour.add("(min-width: 769px)", () => {
+  const scrollTriggerConfig = {
+    trigger: ".Fourth-section",
+    start: "-20% 80%",
+    end: "center center",
+    scrub: true,
+    pinSpacing: true,
+    // markers: true,
+  };
+
+  gsap.to(".advantage-section-one", {
+    x: 0,
+    scrollTrigger: scrollTriggerConfig,
+    duration: 0.2,
+    ease: "circ.out",
+  }),
+
+    gsap.to(".advantage-section-two", {
+      x: 0,
+      scrollTrigger: scrollTriggerConfig,
+      duration: 0.2,
+      ease: "circ.out",
+    })
+});
 
 // let ResponsiveSectionFour = gsap.matchMedia();
 // ResponsiveSectionFour.add("(min-width: 769px)", () => {

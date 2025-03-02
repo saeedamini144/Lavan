@@ -1322,16 +1322,23 @@ font-family: "PeydaLight";
   transform-origin: center;
 }
 
-/* .advantage-section {
+.advantage-section-one {
   display: flex;
   justify-content: center;
   gap: 20px;
-  padding: 100px 0 100px 0;
   transform: translateX(100vw);
   transition: 0.5s;
 }
 
-.advantage-card:nth-child(1) {
+.advantage-section-two {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  transform: translateX(-100vw);
+  transition: 0.5s;
+}
+
+/*.advantage-card:nth-child(1) {
   background-color: var(--pastel-orange);
 }
 
@@ -1397,6 +1404,22 @@ font-family: "PeydaLight";
 } */
 
 @media (max-width: 768px) {
+  .advantage-section-one {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    transition: 0.5s;
+  }
+
+  .advantage-section-two {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    transition: 0.5s;
+  }
+
   .advantage-card {
     width: 100%;
     height: 218px;
