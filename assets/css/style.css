@@ -1408,6 +1408,7 @@ font-family: "PeydaLight";
     display: flex;
     flex-direction: column;
     justify-content: center;
+    transform: translateX(0);
     gap: 20px;
     transition: 0.5s;
   }
@@ -1416,6 +1417,7 @@ font-family: "PeydaLight";
     display: flex;
     flex-direction: column;
     justify-content: center;
+    transform: translateX(0);
     gap: 20px;
     transition: 0.5s;
   }
@@ -1560,88 +1562,34 @@ padding-top: 16px;
 /* fifth section end */
 
 /* footer section start */
-footer {
-  background-color: var(--dark-background);
-  color: var(--whiteColor);
-  padding: 90px 84px 90px 84px;
+footer h4 {
+  font-family: 'PeydaMedium';
+  color: var(--blackColor);
+  font-size: 18px;
 }
 
-.icon-list img {
-  width: 24px;
-  height: auto;
+footer ul li a,
+span {
+  color: var(--blackColor);
+  font-family: 'PeydaLight';
+  font-size: 16px;
+}
 
+footer ul {
+  padding: 0;
+}
+
+footer ul li {
+  margin-top: 24px;
 }
 
 footer h3 {
-  font-family: "PeydaBold";
-  font-size: 40px;
-  line-height: 2rem;
-}
-
-.contact-list li {
-  font-family: "Peydamedium";
-  font-size: 18px;
-  line-height: 1.5rem;
-  margin: 20px 0;
-}
-
-.social-icon li a img {
-  width: 24px;
-}
-
-.search__input {
-  width: 100%;
-  padding: 12px 24px;
-  font-family: "PeydaLight";
-  background-color: transparent;
-  font-size: 14px;
-  line-height: 18px;
-  color: var(--whiteColor);
-
-  background-image: url("/assets/pic/search-normal.svg");
-  background-repeat: no-repeat;
-  background-size: 18px 18px;
-  background-position: 95% center;
-
-  border-radius: 50px;
-  border: 1px solid var(--whiteColor);
-  transition: all 250ms ease-in-out;
-  backface-visibility: hidden;
-  transform-style: preserve-3d;
-}
-
-.search__input::placeholder {
-  color: var(--whiteColor);
-  padding-right: 20px;
-}
-
-.search__input:hover,
-.search__input:focus {
-  padding: 24px 0;
-  outline: 0;
-  border: 1px solid transparent;
-  border-bottom: 1px solid var(--whiteColor);
-  border-radius: 0;
-
-  /* تغییر موقعیت آیکون هنگام هاور و فوکوس */
-  background-position: 0 center;
+  font-family: 'PeydaBold';
+  font-size: 28px;
 }
 
 /* تنظیمات عمومی برای از موبایل تا تبلت */
-@media (max-width: 768px) {
-  footer {
-    padding: 90px 10px 90px 10px;
-    gap: 15px;
-  }
-
-  footer h3 {
-    font-size: 28px;
-  }
-
-  .contact-list li {
-    font-size: 16px;
-  }
-}
+@media (max-width: 768px) {}
 
 /* footer section end */
 
