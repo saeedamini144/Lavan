@@ -1748,6 +1748,14 @@ footer h3 {
     text-align: center;
   }
 
+  .newsletter-form button {
+    border-radius: 12px;
+    background-color: var(--blackColor);
+    padding: 7px 12px;
+    color: var(--whiteColor);
+    font-size: 14px;
+    font-family: 'PeydaMedium';
+  }
 }
 
 /* footer section end */
