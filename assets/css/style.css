@@ -1066,7 +1066,7 @@ font-family: "PeydaLight";
     object-fit: cover;
     border-radius: 12px;
     opacity: 0;
-    transform: scale(0.5);
+    transform: scale(1) !important;
   }
 
   /* .second-section {
