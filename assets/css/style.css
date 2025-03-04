@@ -1564,6 +1564,7 @@ padding-top: 16px;
 /* footer section start */
 footer {
   position: relative;
+  /* overflow-x: hidden; */
 }
 
 footer h4 {
@@ -1729,14 +1730,14 @@ footer h3 {
 /* تنظیمات عمومی برای  موبایل   */
 @media (max-width: 425px) {
   .newsletter {
-    width: 380px;
+    width: 350px;
     background-color: var(--text-purple);
     color: var(--whiteColor);
     padding: 25px;
     align-items: center;
     border-radius: 16px;
     position: absolute;
-    right: 8%;
+    right: 6%;
   }
 
   .copyright {
