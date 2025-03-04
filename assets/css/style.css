@@ -1562,6 +1562,10 @@ padding-top: 16px;
 /* fifth section end */
 
 /* footer section start */
+footer {
+  position: relative;
+}
+
 footer h4 {
   font-family: 'PeydaMedium';
   color: var(--blackColor);
@@ -1588,8 +1592,162 @@ footer h3 {
   font-size: 28px;
 }
 
+.footer-first-div {
+  padding-bottom: 50px;
+}
+
+.newsletter {
+  width: 980px;
+  background-color: var(--text-purple);
+  color: var(--whiteColor);
+  padding: 32px;
+  align-items: center;
+  border-radius: 16px;
+  position: absolute;
+  right: 25%;
+}
+
+.newsletter-title {
+  font-family: 'PeydaMedium';
+  font-size: 24px;
+  color: var(--whiteColor);
+}
+
+.newsletter-text {
+  font-family: 'PeydaLight';
+  font-size: 16px;
+  text-align: justify;
+}
+
+.newsletter-form {
+  background-color: var(--light-purple);
+  border-radius: 12px;
+  padding: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.newsletter-form form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.newsletter-form input {
+  background-color: var(--light-purple);
+  /* width: 90%; */
+  direction: rtl;
+  padding-right: 5px;
+}
+
+.newsletter-form button {
+  border-radius: 12px;
+  background-color: var(--blackColor);
+  padding: 8px 16px;
+  color: var(--whiteColor);
+  font-size: 16px;
+  font-family: 'PeydaMedium';
+}
+
+.footer-second-div {
+  background-color: var(--blackColor);
+  padding: 80px 80px;
+}
+
+.footer-social-icon li {
+  display: inline-block;
+  margin: 15px;
+}
+
+.footer-social-icon li a span {
+  color: var(--whiteColor);
+}
+
+.footer-social-icon li {
+  display: inline-block;
+  margin: 15px;
+}
+
+.footer-menu li a {
+  color: var(--whiteColor);
+}
+
+.footer-menu {
+  text-align: end;
+}
+
+.footer-menu li {
+  display: inline-block;
+  margin: 15px;
+}
+
+.copyright {
+  background-color: var(--blackColor);
+  color: var(--gray);
+  font-family: 'peydaWeb-light';
+  font-size: 12px;
+}
+
+.copyright hr {
+  width: 100%;
+  height: 2px;
+  color: var(--gray);
+}
+
 /* تنظیمات عمومی برای از موبایل تا تبلت */
-@media (max-width: 768px) {}
+@media (max-width: 768px) {
+  .newsletter {
+    width: 680px;
+    background-color: var(--text-purple);
+    color: var(--whiteColor);
+    padding: 32px;
+    align-items: center;
+    border-radius: 16px;
+    position: absolute;
+    right: 5%;
+  }
+
+  .footer-second-div {
+    background-color: var(--blackColor);
+    padding: 160px 10px 80px 10px;
+  }
+
+  .footer-menu,
+  .footer-social-icon {
+    text-align: center;
+  }
+
+  .copyright-right-content p,
+  .copyright-left-content p {
+    text-align: center;
+    font-size: 10px;
+  }
+}
+
+/* تنظیمات عمومی برای  موبایل   */
+@media (max-width: 480px) {
+  .newsletter {
+    width: 380px;
+    background-color: var(--text-purple);
+    color: var(--whiteColor);
+    padding: 32px;
+    align-items: center;
+    border-radius: 16px;
+    position: absolute;
+    right: 7%;
+  }
+
+  .copyright {
+    background-color: var(--blackColor);
+    color: var(--gray);
+    font-family: 'peydaWeb-light';
+    font-size: 10px;
+    text-align: center;
+  }
+
+}
 
 /* footer section end */
 
@@ -1703,6 +1861,8 @@ footer h3 {
     grid-template-rows: repeat(2, auto);
   }
 }
+
+
 
 /* تنظیمات عمومی برای  موبایل */
 
