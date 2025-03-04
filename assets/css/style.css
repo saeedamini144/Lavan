@@ -1727,16 +1727,16 @@ footer h3 {
 }
 
 /* تنظیمات عمومی برای  موبایل   */
-@media (max-width: 480px) {
+@media (max-width: 425px) {
   .newsletter {
     width: 380px;
     background-color: var(--text-purple);
     color: var(--whiteColor);
-    padding: 32px;
+    padding: 25px;
     align-items: center;
     border-radius: 16px;
     position: absolute;
-    right: 7%;
+    right: 8%;
   }
 
   .copyright {
