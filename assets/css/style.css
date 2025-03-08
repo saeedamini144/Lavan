@@ -1798,7 +1798,7 @@ footer h3 {
 
 .Main-title h1 {
   font-family: "PeydaBold";
-  line-height: 1.9rem;
+  line-height: 1.5em;
   color: var(--whiteColor);
   opacity: 100%;
   margin-top: 50px;
@@ -1875,14 +1875,26 @@ footer h3 {
 
 /* تنظیمات عمومی برای  موبایل */
 
-/* @media (max-width: 480px) {
-  .content-grid-gallery {
-    display: grid;
-    gap: 0;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, auto);
+@media (max-width: 480px) {
+  .banner-page {
+    opacity: 0.3;
+    mix-blend-mode: luminosity;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 350px;
+    height: 472px;
+    margin: auto;
   }
-} */
+
+  .English-main-title h2 {
+    font-size: 45px;
+  }
+
+  .Main-title h1 {
+    font-size: 45px;
+  }
+}
 
 /* page template style */
 
@@ -2011,3 +2023,43 @@ footer h3 {
 } */
 
 /* faq style */
+
+/* post archive style start */
+.post-archive-pagination {
+
+  word-wrap: break-word;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.pagination a,
+.pagination span {
+  padding: 4px 12px;
+  margin: 0 5px;
+  border: 1px solid #ddd;
+  text-decoration: none;
+  color: #333;
+  border-radius: 50%;
+}
+
+.pagination a:hover {
+  background-color: var(--light-purple);
+  color: var(--Lavan-purple);
+}
+
+.pagination a.active {
+  background-color: var(--light-purple);
+  color: var(--Lavan-purple);
+  border: 1px solid var(--Lavan-purple);
+}
+
+.archive-description {
+  word-wrap: break-word;
+}
+
+/* post archive style end */
