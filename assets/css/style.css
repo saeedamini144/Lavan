@@ -1684,6 +1684,10 @@ footer h3 {
   margin: 15px;
 }
 
+.copyright-content p {
+  text-align: center;
+}
+
 .copyright {
   background-color: var(--blackColor);
   color: var(--gray);
@@ -1720,11 +1724,6 @@ footer h3 {
     text-align: center;
   }
 
-  .copyright-right-content p,
-  .copyright-left-content p {
-    text-align: center;
-    font-size: 10px;
-  }
 }
 
 /* تنظیمات عمومی برای  موبایل   */
