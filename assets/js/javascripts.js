@@ -165,7 +165,7 @@ ResponsiveSectionThree.add("(min-width: 769px)", () => {
     end: "center center",
     scrub: true,
     pinSpacing: true,
-    markers: true,
+    // markers: true,
   };
 
   gsap.to(".to-right", {
