@@ -209,6 +209,13 @@ a button:hover svg {
   padding: 0 82px;
 }
 
+#button {
+  transition: transform 0.2s ease-out;
+  /* اضافه کردن انتقال برای ویژگی transform */
+  position: relative;
+  /* برای اینکه transform به درستی کار کند */
+}
+
 /* تنظیمات عمومی برای از موبایل تا تبلت */
 @media (max-width: 768px) {
   .content-padding {

@@ -27,6 +27,26 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+// button effects
+const buttons = document.querySelectorAll('#button');
+
+buttons.forEach(button => {
+  button.addEventListener('mousemove', (event) => {
+    const rect = button.getBoundingClientRect();
+    const mouseX = event.clientX - rect.left;
+    const mouseY = event.clientY - rect.top;
+
+    const deltaX = (mouseX - rect.width / 2) / 2;
+    const deltaY = (mouseY - rect.height / 2) / 2;
+
+    button.style.transform = `translate(${deltaX}px, ${deltaY}px)`;
+  });
+
+  button.addEventListener('mouseleave', () => {
+    button.style.transform = 'translate(0, 0)';
+  });
+});
+
 //animation gsap
 
 // Initialize a new Lenis instance for smooth scrolling
@@ -482,3 +502,5 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 });
+
+
