@@ -36,8 +36,8 @@ buttons.forEach(button => {
     const mouseX = event.clientX - rect.left;
     const mouseY = event.clientY - rect.top;
 
-    const deltaX = (mouseX - rect.width / 2) / 2;
-    const deltaY = (mouseY - rect.height / 2) / 2;
+    const deltaX = (mouseX - rect.width / 2) / 4;
+    const deltaY = (mouseY - rect.height / 2) / 4;
 
     button.style.transform = `translate(${deltaX}px, ${deltaY}px)`;
   });
