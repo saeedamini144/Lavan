@@ -328,7 +328,7 @@ ResponsiveSectionFive.add("(min-width : 769px)", () => {
 // const texts = document.querySelectorAll(".text-block");
 // const stickySection = document.querySelector(".sticky-section");
 
-// // ایجاد تایم‌لاین برای پین کردن بخش
+// ایجاد تایم‌لاین برای پین کردن بخش
 // gsap.timeline({
 //   scrollTrigger: {
 //     trigger: stickySection,
