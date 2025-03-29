@@ -270,9 +270,10 @@ ResponsiveSectionFive.add("(min-width : 769px)", () => {
       // pin: true,
       // pinSpacing: true, // جلوگیری از نمایش زودهنگام سکشن بعدی
       anticipatePin: 1, // بهینه‌سازی حرکت پین‌شدن
-      start: "top top", // Start the animation when the top of the element is 80% from the top of the viewport
-      end: "bottom bottom", // End the animation when the bottom of the element reaches the top of the viewport
+      start: "-20% 40%", // Start the animation when the top of the element is 80% from the top of the viewport
+      end: "center center", // End the animation when the bottom of the element reaches the top of the viewport
       // scrub: 0.5, // Smooth scrubbing
+      markers: true,
     },
     defaults: {
       duration: 0.5,
