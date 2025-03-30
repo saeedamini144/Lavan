@@ -1482,6 +1482,11 @@ font-family: "PeydaLight";
 }
 
 .Blog-card {
+  background: linear-gradient(145deg,
+      rgba(000, 000, 000, 100%) 19%,
+      rgba(000, 000, 000, 100%) 59%,
+      rgba(000, 000, 000, 80%) 85%,
+      rgba(000, 000, 000, 100%) 100%);
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -1504,31 +1509,31 @@ font-family: "PeydaLight";
   position: relative;
 }
 
-.Blog-card-body::before {
+/* .Blog-card-body::before {
   content: '';
   display: block;
   width: 20px;
   height: 75%;
   bottom: 20px;
   background-color: var(--light-purple2);
-  /* margin: 16px 0; */
   position: absolute;
   right: -16px;
   bottom: -45px;
   z-index: -1;
-}
+} */
 
 .Blog-card-title {
   font-family: "PeydaBold";
   font-size: 20px;
   line-height: 2rem;
-  color: var(--blackColor);
+  color: var(--whiteColor);
 }
 
 .Blog-card-excerept {
   font-family: "PeydaLight";
   font-size: 16px;
   line-height: 1.5rem;
+  color: var(--whiteColor);
 }
 
 /* .Blog-card-meta {
@@ -1539,7 +1544,7 @@ padding-top: 16px;
   font-family: "PeydaLight";
   font-size: 12px;
   line-height: 1.2rem;
-  color: var(--blackColor);
+  color: var(--GrayScale900);
 }
 
 .Blog-card-meta span:nth-child(1)::after {
@@ -1553,16 +1558,16 @@ padding-top: 16px;
   border-radius: 50px;
   font-family: "PeydaMedium";
   font-size: 16px;
-  color: var(--text-purple);
-  background-color: var(--light-purple);
+  color: var(--dark-background);
+  background-color: var(--whiteColor);
   overflow: hidden;
 }
 
 .Blog-button button svg {
-  fill: var(--text-purple);
+  fill: var(--dark-background);
 }
 
-.blog-card-button img {
+.dot-img {
   width: 33px;
 }
 
