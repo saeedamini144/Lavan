@@ -62,12 +62,11 @@ html {
   width: 1272px;
   margin: 0 auto;
 } */
-body {
+/* body {
   background: linear-gradient(107deg,
       rgba(223, 213, 255, 1) 1%,
       rgba(255, 255, 255, 1) 9%);
-  /* cursor: url(/assets/pic/Arrow-Down.png), auto; */
-}
+} */
 
 @font-face {
   font-family: "PeydaLight";
@@ -1783,6 +1782,7 @@ footer h3 {
       rgba(000, 000, 000, 80%) 75%,
       rgba(000, 000, 000, 100%) 100%);
   height: auto;
+  overflow-wrap: break-word;
   display: flex;
   overflow: hidden;
   position: relative;
@@ -1822,7 +1822,6 @@ footer h3 {
 .English-main-title {
   font-family: "PeydaBold";
   line-height: 1.9rem;
-  color: var(--text);
   opacity: 100%;
   text-align: end;
 }
@@ -1835,6 +1834,14 @@ footer h3 {
 .content-section {
   padding-top: 32px;
   padding-bottom: 32px;
+}
+
+.breadcrumb {
+  margin: 32px 0 32px 0;
+}
+
+.breadcrumb ul {
+  padding: 0;
 }
 
 .breadcrumb ul li {
@@ -2036,6 +2043,66 @@ footer h3 {
 /* faq style */
 
 /* post archive style start */
+.archive-section-top-content {
+  background: url(/assets/pic/archive-pattern.svg);
+  background-repeat: repeat;
+  background-size: cover;
+}
+
+.archive-content {
+  text-align: center;
+  width: 450px;
+  margin: auto;
+}
+
+.archive-content h2 {
+  font-size: 24px;
+}
+
+.archive-content p {
+  text-align: center;
+}
+
+.archive-content img {
+  width: 24px;
+  height: 24px;
+  margin: 16px 0 16px 0;
+}
+
+.archive-section {
+  width: 100%;
+  height: auto;
+  padding: 10px 0 120px 0;
+  margin: auto;
+  overflow: hidden;
+}
+
+.category-list {
+  margin: 80px 0 20px 0;
+}
+
+.category-list ul {
+  padding: 0;
+}
+
+.category-list ul li {
+  display: inline;
+  margin-inline: 24px;
+}
+
+.category-list ul li a {
+  display: inline-block;
+  color: var(--gray2);
+}
+
+.category-list ul li a:hover {
+  color: var(--dark-background);
+}
+
+.category-list ul li a:active {
+  color: var(--Lavan-purple);
+}
+
 .post-archive-pagination {
   word-wrap: break-word;
 }
