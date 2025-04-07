@@ -53,7 +53,7 @@ window.addEventListener('scroll', function () {
     let boxMenu = document.querySelector('.header');
     let mainMenu = document.querySelector('.second-menu');
     let itemsMenu = document.querySelectorAll('.menu-link');
-    let whiteLogo = document.querySelector('.whiteLogo');
+    // let whiteLogo = document.querySelector('.whiteLogo');
     let blackLogo = document.querySelector('.blackLogo');
     let SearchIcon = document.querySelector('.fa-search');
     let offcanvasMenu = document.querySelectorAll('.menu-item');
@@ -65,7 +65,6 @@ window.addEventListener('scroll', function () {
       blackLogo.style.display = 'none';
       whiteLogo.style.display = 'block';
       SearchIcon.style.color = 'white';
-
     } else {
       boxMenu.classList.remove('fixed');
       // mainMenu.classList.remove('fixed');
