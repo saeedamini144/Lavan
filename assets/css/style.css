@@ -205,7 +205,7 @@ a button:hover svg {
 }
 
 .content-padding {
-  padding: 0 82px;
+  padding: 80px 82px;
 }
 
 #button {
@@ -237,6 +237,10 @@ a button:hover svg {
   width: 150px;
   height: auto;
 }
+
+/* .second-menu-header {
+  background-color: #000000;
+} */
 
 .main-menu {
   display: flex;
@@ -343,6 +347,31 @@ background: linear-gradient(107deg,
   display: block;
 }
 
+/* js add these classes to the menu items */
+.fixed {
+  position: sticky;
+  top: 20px;
+  left: 82px;
+  right: 82px;
+  background-color: '#F1F1F1';
+  background-color: var(--whiteColor);
+  border-radius: 0px;
+  width: 100%;
+  transition: all 0.5s ease-in-out;
+}
+
+.backgroundColorHeader {
+  background-color: var(--blackColor);
+  border-radius: 100px;
+}
+
+.itemColor {
+  color: var(--whiteColor) !important;
+  font-weight: 500;
+}
+
+/* js add these classes to the menu items */
+
 /* ریسپانسیو */
 @media (max-width: 768px) {
   .burger-menu {
@@ -361,6 +390,17 @@ background: linear-gradient(107deg,
     padding: 20px 0;
     border-radius: 100px;
     vertical-align: middle;
+  }
+
+  .second-menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: transparent;
+    padding: 20px 0;
+    border-radius: 100px;
+    vertical-align: middle;
+    transition: all 0.5s ease-in-out;
   }
 
   /* header {
@@ -386,6 +426,10 @@ background: linear-gradient(107deg,
     background: none;
     box-shadow: none;
     padding: 0;
+  }
+
+  .offcanvas-logo {
+    display: none;
   }
 
   .menu-item {
@@ -463,6 +507,32 @@ background: linear-gradient(107deg,
   .main-menu {
     z-index: 1000;
     margin: 0 82px;
+  }
+
+  /* .second-menu {
+    z-index: 1000;
+    padding: 20px 82px;
+  } */
+
+  .second-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+    position: absolute;
+    left: 82px;
+    right: 82px;
+    vertical-align: middle;
+    z-index: 1000;
+  }
+
+  .whiteLogo {
+    display: none;
+  }
+
+  .second-menu-header {
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
   }
 }
 
@@ -1887,6 +1957,11 @@ footer h3 {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, auto);
   }
+
+  .breadcrumb ul li a {
+    color: var(--text);
+    font-size: 12px;
+  }
 }
 
 
@@ -1910,7 +1985,7 @@ footer h3 {
   }
 
   .Main-title h1 {
-    font-size: 45px;
+    font-size: 30px;
   }
 }
 
@@ -2051,8 +2126,9 @@ footer h3 {
 
 .archive-content {
   text-align: center;
-  width: 450px;
+  max-width: 450px;
   margin: auto;
+  overflow-x: auto;
 }
 
 .archive-content h2 {
