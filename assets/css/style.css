@@ -24,6 +24,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
 /* @media (max-width: 480px) {
 
 } */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
 html.lenis,
 html.lenis body {
   height: auto;
@@ -363,6 +365,7 @@ background: linear-gradient(107deg,
 .backgroundColorHeader {
   background-color: var(--blackColor);
   border-radius: 100px;
+  transition: all 0.5s ease-in-out;
 }
 
 .itemColor {
@@ -372,7 +375,7 @@ background: linear-gradient(107deg,
 
 /* js add these classes to the menu items */
 .header {
-  transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out !important;
 }
 
 /* ریسپانسیو */
@@ -527,6 +530,7 @@ background: linear-gradient(107deg,
     right: 82px;
     vertical-align: middle;
     z-index: 1000;
+    transition: all 0.5s ease-in-out;
   }
 
   /* .whiteLogo {
@@ -536,18 +540,6 @@ background: linear-gradient(107deg,
   .second-menu-header {
     z-index: 1000;
   }
-
-  /* .header:after {
-    content: '';
-    background-color: rgba(82, 81, 81, 0.151);
-    position: absolute;
-    height: 8vh;
-    width: 100%;
-    z-index: 998;
-    top: 0;
-    right: 0;
-    transition: all 0.5s ease-in-out;
-  }*/
 }
 
 /* menu style end */
@@ -1809,6 +1801,31 @@ footer h3 {
     right: 5%;
   }
 
+  .Blog-card-title {
+    font-family: "PeydaBold";
+    font-size: 16px;
+    line-height: 2rem;
+    color: var(--whiteColor);
+  }
+
+  .Blog-card-excerept {
+    font-family: "PeydaLight";
+    font-size: 12px;
+    line-height: 1.5rem;
+    color: var(--whiteColor);
+  }
+
+  .Blog-button button {
+    width: 182px;
+    height: 40px;
+    border-radius: 50px;
+    font-family: "PeydaMedium";
+    font-size: 12px;
+    color: var(--dark-background);
+    background-color: var(--whiteColor);
+    overflow: hidden;
+  }
+
   .footer-second-div {
     background-color: var(--blackColor);
     padding: 160px 10px 80px 10px;
@@ -2232,6 +2249,10 @@ footer h3 {
 /* post archive style end */
 
 /* single post style start */
+.content-section {
+  padding-inline: 82px !important;
+}
+
 .post-first-section {
   width: 100%;
   height: 600px;
@@ -2267,6 +2288,33 @@ footer h3 {
   /* اطمینان از اینکه زیر لایه ::before قرار دارد (اختیاری) */
 }
 
+.single-post-content {
+  width: 100%;
+  height: auto;
+  overflow: auto;
+  margin: 32px auto 40px auto;
+}
+
+.single-post-meta {
+  margin-bottom: 32px;
+  margin-top: 20px;
+}
+
+.single-post-meta ul li {
+  display: inline;
+  font-family: "PeydaLight";
+  font-size: 14px;
+}
+
+.single-post-meta ul {
+  padding-right: 0;
+}
+
+.single-post-meta ul li a {
+  color: var(--text);
+  padding: 10px;
+}
+
 .post-first-section,
 h1,
 h2,
@@ -2275,6 +2323,7 @@ h4,
 h5,
 h6 {
   font-family: 'PeydaBold';
+  line-height: 1.5em;
 }
 
 .post-first-section p {
@@ -2307,4 +2356,234 @@ h6 {
   color: var(--dark-background);
 }
 
+.share-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--GrayScale900);
+  border-bottom: 1px solid var(--GrayScale900);
+  padding: 8px 0 8px 0;
+}
+
+.share-section span {
+  font-size: 22px;
+  font-family: 'PeydaBold';
+  color: var(--gray);
+}
+
+.share-section ul {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.share-section ul li {
+  display: inline-block;
+  padding: 10px;
+}
+
+.share-section ul li a {
+  color: var(--text-purple);
+  font-size: 18px;
+}
+
+.related-post {
+  margin-bottom: 80px;
+}
+
+.related-post-title {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+
+.related-post-title span {
+  font-size: 28px;
+  font-family: 'PeydaBold';
+  color: var(--text);
+  padding: 10px 0 10px 0;
+}
+
+.related-post-title img {
+  width: 80px;
+  padding-inline: 10px;
+}
+
+.Blog-section p {
+  font-size: 20px;
+}
+
+/* تنظیمات عمومی برای از موبایل تا تبلت */
+@media (max-width: 768px) {
+
+  .Blog-section p {
+    font-size: 16px;
+  }
+
+  .content-section {
+    padding-inline: 32px !important;
+  }
+
+  .single-post-title {
+    font-size: 20px;
+  }
+
+  .single-post-meta ul li a {
+    color: var(--text);
+    padding: 5px;
+  }
+
+  .share-section span {
+    font-size: 14px;
+    font-family: 'PeydaBold';
+    color: var(--gray);
+  }
+
+  .share-section ul li {
+    display: inline-block;
+    padding: 5px;
+  }
+
+  .share-section ul {
+    display: flex;
+    justify-content: space-between;
+    gap: 0;
+  }
+
+  .comment-title span {
+    font-size: 20px !important;
+  }
+
+  .comment-form .comment-input {
+    width: 100% !important;
+    font-size: 14px !important;
+    padding: 16px !important;
+  }
+
+  .related-post-title span {
+    font-size: 20px !important;
+  }
+
+  .post-first-section,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'PeydaBold';
+    line-height: 1.8em;
+    font-size: 13px;
+  }
+}
+
+/* تنظیمات عمومی برای  موبایل */
+
+@media (max-width: 480px) {
+  .content-section {
+    padding-inline: 16px !important;
+  }
+}
+
 /* single post style end */
+
+/* comments style start */
+.comments {
+  width: 100%;
+  height: auto;
+  padding: 80px 0 80px 0;
+  margin: auto;
+  overflow: hidden;
+}
+
+.comment-title {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+
+}
+
+.comment-title span {
+  font-size: 28px;
+  font-family: 'PeydaBold';
+  color: var(--text);
+  padding: 10px 0 10px 0;
+}
+
+.comment-title img {
+  width: 80px;
+  padding-inline: 10px;
+}
+
+.comment-form {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 80px;
+}
+
+.comment-form .comment-input {
+  width: 49%;
+  border-radius: 12px;
+  padding: 10px;
+  font-size: 16px;
+  font-family: 'PeydaLight';
+  color: var(--gray);
+  padding: 20px;
+  border: 1px solid var(--gray);
+}
+
+.textarea {
+  width: 100%;
+  border-radius: 12px;
+  padding: 10px;
+  font-size: 16px;
+  font-family: 'PeydaLight';
+  color: var(--gray);
+  padding: 20px;
+  border: 1px solid var(--gray);
+}
+
+/* comments style end */
+
+/* portfolio single page start */
+.portfolio-post-content {
+  width: 100%;
+  height: auto;
+  overflow: auto;
+}
+
+.other-portfolio-title {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  margin-bottom: 40px;
+}
+
+.other-portfolio-title span {
+  font-size: 28px;
+  font-family: 'PeydaBold';
+  color: var(--text);
+  padding: 10px 0 10px 0;
+}
+
+.other-portfolio-title img {
+  width: 80px;
+  padding-inline: 10px;
+}
+
+.portfolio-gallery {
+  margin-bottom: 120px;
+}
+
+/* تنظیمات عمومی برای از موبایل تا تبلت */
+@media (max-width: 768px) {
+  .other-portfolio-title span {
+    font-size: 20px;
+  }
+}
+
+/* portfolio single page end */
